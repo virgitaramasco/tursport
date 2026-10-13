@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sport | Tursport Hotel Residence</title>
+<meta name="description" content="Impianti sportivi d'eccellenza a Taranto: tennis, beach tennis, beach volley e palasport.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="header__in">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer">
+      <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span>
+      <span class="menu-btn__label" data-i18n="menu_btn">Menu</span>
+    </button>
+    <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+    <div class="header__right">
+      <div class="lang-switch" role="group" aria-label="Selezione lingua / Language selection">
+        <button type="button" class="lang-btn is-active" id="langIt" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" id="langEn" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+      <a class="btn book" href="contatti.html?motivo=Camere%20e%20appartamenti" data-i18n="book_btn">Book</a>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principale">
+  <div class="drawer__top">
+    <span class="h3">Tursport</span>
+    <button class="drawer__close" id="menuClose" aria-label="Chiudi menu" data-i18n="menu_close">Chiudi &#x2715;</button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html"  data-i18n="nav_home">Home</a></li>
+      <li><a href="about.html"  data-i18n="nav_about">About Us</a></li>
+      <li><a href="services.html"  data-i18n="nav_services">Services</a></li>
+      <li><a href="rooms.html"  data-i18n="nav_rooms">Rooms / Apartments</a></li>
+      <li><a href="sport.html" aria-current="page" class="is-active" data-i18n="nav_sport">Sport</a></li>
+      <li><a href="pool.html"  data-i18n="nav_pool">Pool Club</a></li>
+      <li><a href="palazzetto.html"  data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
+      <li><a href="corporate.html"  data-i18n="nav_corporate">Eventi aziendali</a></li>
+      <li><a href="convention.html"  data-i18n="nav_convention">Convention</a></li>
+      <li><a href="coworking.html"  data-i18n="nav_coworking">Co-work Spaces</a></li>
+      <li><a href="newsletter.html"  data-i18n="nav_newsletter">Newsletter</a></li>
+      <li><a href="contatti.html"  data-i18n="nav_contact">Contact Us</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a></li>
+    </ul>
+  </nav>
+  <div class="drawer__lang">
+    <span class="drawer__lang-label">Lingua / Language</span>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Selezione lingua">
+      <button type="button" class="lang-btn is-active" data-lang="it">IT</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en">ENG</button>
+    </div>
+  </div>
+  <div class="drawer__contact">
+    <p>Via del Faro, 58<br>74122 San Vito – Taranto</p>
+    <p style="margin-top:.4rem"><a href="tel:+390997330111">+39 099 733 0111</a></p>
+    <p><a href="mailto:booking@tursport.it">booking@tursport.it</a></p>
+  </div>
+  <div class="drawer__ig">
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a>
+  </div>
+</aside>
+<main id="main">
+
+<section class="sec sport" style="padding-top:calc(var(--head-h) + 1.5rem)">
+  <div class="wrap">
+    <div class="sport__top reveal">
+      <h1 class="h1-page" data-i18n="sport_h2">Lo sport fa parte della nostra storia.</h1>
+      <div>
+        <p class="lead" style="margin-bottom:1rem" data-i18n="sport_lead">La vocazione sportiva è una parte importante dell'identità Tursport.</p>
+        <p data-i18n="sport_p1">Al Tursport, lo sport è un modo di vivere gli spazi e condividere nuove energie. Dai campi da tennis alle superfici dedicate al beach tennis e al beach volley, fino al palazzetto per il basket, ogni impianto offre l’opportunità di coltivare la propria passione e trovare il proprio modo di mettersi in gioco.</p>
+      </div>
+    </div>
+    <ul class="facilities">
+      <li class="reveal">
+        <div class="ph"><img src="sito/sito/DSCF1240.webp" alt="Campi da tennis" loading="lazy"></div>
+        <h3 class="h3" data-i18n="fac_tennis">Campi da tennis</h3>
+      </li>
+      <li class="reveal reveal-delay-1">
+        <div class="ph"><img src="sito/sito/DSCF0801.webp" alt="Beach tennis e fitness" loading="lazy"></div>
+        <h3 class="h3" data-i18n="fac_beachtennis">Beach tennis</h3>
+      </li>
+      <li class="reveal reveal-delay-2">
+        <div class="ph"><img src="sito/sito/DSCF1244.webp" alt="Beach volley" loading="lazy"></div>
+        <h3 class="h3" data-i18n="fac_beachvolley">Beach volley</h3>
+      </li>
+      <li class="reveal reveal-delay-3">
+        <div class="ph"><img src="sito/sito/DSCF0744.webp" alt="Palazzetto basket" loading="lazy"></div>
+        <h3 class="h3" data-i18n="fac_basket">Palazzetto per il basket</h3>
+      </li>
+    </ul>
+    <div style="margin-top:clamp(2.5rem, 5vw, 4rem)" class="reveal">
+      <p data-i18n="sport_p2">Scopri gli impianti e trova lo spazio per il tuo prossimo match.</p>
+      <div class="actions">
+        <a class="btn" href="contatti.html?motivo=Sport%20e%20impianti" data-i18n="sport_btn">Scopri gli impianti</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+        <p style="margin-top:.85rem" data-i18n="footer_desc">Hotel Residence a Capo San Vito, Taranto.</p>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_contact">Contatti</h2>
+        <ul>
+          <li>Via del Faro, 58<br>74122 San Vito – Taranto</li>
+          <li><a href="tel:+390997330111">+39 099 733 0111</a></li>
+          <li><a href="mailto:booking@tursport.it">booking@tursport.it</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_follow">Seguici</h2>
+        <ul>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/393926283171">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_info">Informazioni</h2>
+        <ul>
+          <li><a href="contatti.html" data-i18n="footer_privacy">Privacy policy</a></li>
+          <li><a href="contatti.html" data-i18n="footer_cookie">Cookie policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span data-i18n="footer_copy">&copy; 2026 Tursport Hotel Residence. Tutti i diritti riservati.</span>
+      <span data-i18n="footer_location">Capo San Vito &middot; Taranto &middot; Puglia</span>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

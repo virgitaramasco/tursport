@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Us | Tursport Hotel Residence</title>
+<meta name="description" content="Tursport nasce nel 1980 a Capo San Vito, Taranto: una storia di accoglienza, sport e territorio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="header__in">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer">
+      <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span>
+      <span class="menu-btn__label" data-i18n="menu_btn">Menu</span>
+    </button>
+    <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+    <div class="header__right">
+      <div class="lang-switch" role="group" aria-label="Selezione lingua / Language selection">
+        <button type="button" class="lang-btn is-active" id="langIt" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" id="langEn" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+      <a class="btn book" href="contatti.html?motivo=Camere%20e%20appartamenti" data-i18n="book_btn">Book</a>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu principale">
+  <div class="drawer__top">
+    <span class="h3">Tursport</span>
+    <button class="drawer__close" id="menuClose" aria-label="Chiudi menu" data-i18n="menu_close">Chiudi &#x2715;</button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html"  data-i18n="nav_home">Home</a></li>
+      <li><a href="about.html" aria-current="page" class="is-active" data-i18n="nav_about">About Us</a></li>
+      <li><a href="services.html"  data-i18n="nav_services">Services</a></li>
+      <li><a href="rooms.html"  data-i18n="nav_rooms">Rooms / Apartments</a></li>
+      <li><a href="sport.html"  data-i18n="nav_sport">Sport</a></li>
+      <li><a href="pool.html"  data-i18n="nav_pool">Pool Club</a></li>
+      <li><a href="palazzetto.html"  data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
+      <li><a href="corporate.html"  data-i18n="nav_corporate">Eventi aziendali</a></li>
+      <li><a href="convention.html"  data-i18n="nav_convention">Convention</a></li>
+      <li><a href="coworking.html"  data-i18n="nav_coworking">Co-work Spaces</a></li>
+      <li><a href="newsletter.html"  data-i18n="nav_newsletter">Newsletter</a></li>
+      <li><a href="contatti.html"  data-i18n="nav_contact">Contact Us</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a></li>
+    </ul>
+  </nav>
+  <div class="drawer__lang">
+    <span class="drawer__lang-label">Lingua / Language</span>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Selezione lingua">
+      <button type="button" class="lang-btn is-active" data-lang="it">IT</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en">ENG</button>
+    </div>
+  </div>
+  <div class="drawer__contact">
+    <p>Via del Faro, 58<br>74122 San Vito – Taranto</p>
+    <p style="margin-top:.4rem"><a href="tel:+390997330111">+39 099 733 0111</a></p>
+    <p><a href="mailto:booking@tursport.it">booking@tursport.it</a></p>
+  </div>
+  <div class="drawer__ig">
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a>
+  </div>
+</aside>
+<main id="main">
+
+<section class="sec" style="padding-top:calc(var(--head-h) + 1.5rem)">
+  <div class="wrap">
+    <div class="about__head reveal">
+      <h1 class="h1-page" data-i18n="about_h2">Dal 1980, un punto d’incontro.</h1>
+      <p class="lead about__lead" data-i18n="about_lead">Ci sono luoghi che nascono per accogliere. E altri che, nel tempo, diventano parte della storia di una città.</p>
+      <div class="about__body">
+        <p data-i18n="about_p1">Tursport nasce nel 1980 a San Vito, alle porte di Taranto, con una vocazione che va oltre l’ospitalità. Nel corso degli anni, ha accolto personalità di spicco del panorama italiano e internazionale, diventando un punto di riferimento per lo sport, la cultura e la vita del territorio.</p>
+        <p data-i18n="about_p2">Una storia costruita attraverso le persone, le passioni e le occasioni di condivisione.</p>
+        <p data-i18n="about_p3">Oggi Tursport continua a evolversi, in Un luogo che accoglie storie diverse e continua a crearne di nuove.</p>
+      </div>
+    </div>
+
+    <!-- Sezione Gallery -->
+    <div class="gallery" id="gallery">
+      <div class="gallery__head reveal">
+        <div>
+          <h2 class="h2" style="margin-bottom:.8rem" data-i18n="gallery_h2">Gli spazi, da vicino.</h2>
+          <p data-i18n="gallery_desc">Scopri gli ambienti e i luoghi che compongono il mondo Tursport.</p>
+        </div>
+        <button type="button" class="btn" id="openGalleryBtn" data-i18n="gallery_btn">Esplora la gallery</button>
+      </div>
+      
+      <!-- Galleria Fotografica AL VIVO con trigger Lightbox -->
+      <div class="gallery__grid--bleed reveal reveal-delay-1">
+        <div class="g1"><div class="ph" data-gallery-idx="0"><img src="sito/sito/DSCF1194.webp" alt="Tursport" loading="lazy"></div></div>
+        <div class="g2"><div class="ph" data-gallery-idx="1"><img src="sito/sito/foto1.webp" alt="Tursport" loading="lazy"></div></div>
+        <div class="g3"><div class="ph" data-gallery-idx="2"><img src="sito/sito/DSCF0705.webp" alt="Tursport" loading="lazy"></div></div>
+        <div class="g4"><div class="ph" data-gallery-idx="3"><img src="sito/sito/DSCF1403.webp" alt="Tursport" loading="lazy"></div></div>
+        <div class="g5"><div class="ph" data-gallery-idx="4"><img src="sito/sito/DSCF1011.webp" alt="Tursport" loading="lazy"></div></div>
+      </div>
+    </div>
+
+    <!-- Modal Galleria Fullscreen Navigabile -->
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Galleria a schermo intero">
+      <button class="gallery-modal__close" id="galleryClose" aria-label="Chiudi galleria">&#x2715;</button>
+      <button class="gallery-modal__nav gallery-modal__prev" id="galleryPrev" aria-label="Immagine precedente">&#x276E;</button>
+      <div class="gallery-modal__stage">
+        <img id="galleryModalImg" src="sito/sito/DSCF1194.webp" alt="Galleria Tursport">
+        <div class="gallery-modal__caption">
+          <span id="galleryModalCounter" class="gallery-modal__counter">1 / 5</span>
+        </div>
+      </div>
+      <button class="gallery-modal__nav gallery-modal__next" id="galleryNext" aria-label="Immagine successiva">&#x276F;</button>
+    </div>
+
+    <!-- Sezione Community -->
+    <div class="community reveal">
+      <div class="community__text">
+        <h2 class="h2" style="margin-bottom:.8rem" data-i18n="comm_h2">Resta in contatto con Tursport.</h2>
+        <p data-i18n="comm_desc">Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.</p>
+      </div>
+      <form class="form" data-form>
+        <div class="field field--full">
+          <label for="comm-email" data-i18n="comm_label">La tua email</label>
+          <input id="comm-email" name="email" type="email" autocomplete="email" placeholder="nome@esempio.it" data-i18n-ph="comm_ph" required>
+        </div>
+        <label class="consent field--full">
+          <input type="checkbox" required>
+          <span data-i18n="comm_consent">Ho letto l'<a href="contatti.html">informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.</span>
+        </label>
+        <div class="field--full"><button class="btn" type="submit" data-i18n="comm_btn">Entra nella community</button></div>
+        <p class="form__status field--full" role="status" aria-live="polite" style="grid-column:1/-1"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+        <p style="margin-top:.85rem" data-i18n="footer_desc">Hotel Residence a Capo San Vito, Taranto.</p>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_contact">Contatti</h2>
+        <ul>
+          <li>Via del Faro, 58<br>74122 San Vito – Taranto</li>
+          <li><a href="tel:+390997330111">+39 099 733 0111</a></li>
+          <li><a href="mailto:booking@tursport.it">booking@tursport.it</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_follow">Seguici</h2>
+        <ul>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/393926283171">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 data-i18n="footer_col_info">Informazioni</h2>
+        <ul>
+          <li><a href="contatti.html" data-i18n="footer_privacy">Privacy policy</a></li>
+          <li><a href="contatti.html" data-i18n="footer_cookie">Cookie policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span data-i18n="footer_copy">&copy; 2026 Tursport Hotel Residence. Tutti i diritti riservati.</span>
+      <span data-i18n="footer_location">Capo San Vito &middot; Taranto &middot; Puglia</span>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

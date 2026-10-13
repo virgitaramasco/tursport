@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+__MACOSX/
+*/__MACOSX/
+node_modules/
+*/node_modules/
+_originals_backup/
