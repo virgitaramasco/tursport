@@ -295,33 +295,87 @@ img {
   letter-spacing: var(--letter-spacing-body);
 }
 .drawer nav > ul { display: grid; gap: 0.2rem; }
-.drawer nav a {
+.drawer nav a,
+.drawer nav button.drawer__sub-toggle {
   display: flex; align-items: center; gap: 0.65rem; padding: 0.25rem 0; text-decoration: none;
   font-family: var(--font-text); font-weight: 600;
   font-size: clamp(1.02rem, 1.6vw, 1.25rem); line-height: 1.25;
   letter-spacing: var(--letter-spacing-body);
   color: var(--ink);
   transition: transform 0.35s ease, color 0.2s ease, opacity 0.2s ease;
+  background: none; border: 0; cursor: pointer; text-align: left; width: 100%;
 }
-.drawer nav a:hover { transform: translateX(0.35rem); }
-.drawer nav a::before {
+.drawer nav a:hover,
+.drawer nav button.drawer__sub-toggle:hover {
+  transform: translateX(0.35rem);
+}
+.drawer nav a::before,
+.drawer nav button.drawer__sub-toggle .drawer__sub-toggle-left::before {
   content: ""; width: 0.45rem; height: 0.45rem; border-radius: 50%;
   background: var(--ink); transform: scale(0); transition: transform 0.35s ease; flex: none;
 }
 .drawer nav a[aria-current="page"]::before,
-.drawer nav a.is-active::before { transform: scale(1); }
+.drawer nav a.is-active::before,
+.drawer nav button.drawer__sub-toggle.is-active .drawer__sub-toggle-left::before,
+.drawer nav button.drawer__sub-toggle.is-parent-active .drawer__sub-toggle-left::before {
+  transform: scale(1);
+}
 .drawer nav a[aria-current="page"],
-.drawer nav a.is-active { font-weight: 700; }
-.drawer nav a.is-parent-active { font-weight: 700; }
+.drawer nav a.is-active,
+.drawer nav button.drawer__sub-toggle.is-active,
+.drawer nav button.drawer__sub-toggle.is-parent-active {
+  font-weight: 700;
+}
 
-/* Submenu annidato sotto Services */
+.drawer nav button.drawer__sub-toggle {
+  justify-content: space-between;
+}
+.drawer nav button.drawer__sub-toggle .drawer__sub-toggle-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.drawer__arrow {
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  opacity: 0.75;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+  flex: none;
+  margin-right: 0.25rem;
+}
+.drawer nav button.drawer__sub-toggle:hover .drawer__arrow {
+  opacity: 1;
+}
+.drawer nav button.drawer__sub-toggle[aria-expanded="true"] .drawer__arrow {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Submenu annidato a tendina sotto Services */
 .drawer__sub {
   list-style: none;
   display: grid;
   gap: 0.12rem;
-  margin: 0.35rem 0 0.55rem 0.4rem;
+  margin: 0;
   padding-left: 1rem;
   border-left: 1.5px solid var(--line);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.28s ease,
+              margin 0.35s ease;
+}
+.drawer__sub.is-open {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+  margin: 0.35rem 0 0.55rem 0.4rem;
 }
 .drawer nav .drawer__sub a {
   font-size: clamp(0.88rem, 1.3vw, 0.98rem);
@@ -331,6 +385,7 @@ img {
   color: var(--ink);
   opacity: 0.82;
   gap: 0.5rem;
+  width: auto;
 }
 .drawer nav .drawer__sub a:hover {
   opacity: 1;

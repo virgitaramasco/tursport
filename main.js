@@ -8,6 +8,7 @@
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
+      nav_services_all: "Tutti i servizi",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -169,6 +170,7 @@
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
+      nav_services_all: "All Services",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -421,6 +423,18 @@
     if(e.key === 'Escape' && drawer && drawer.classList.contains('is-open')){ setMenu(false); }
   });
 
+  /* Drawer Accordion Toggle for Services */
+  var subToggle = document.getElementById('drawerServicesToggle');
+  var subMenu = document.getElementById('drawerServicesSub');
+  if(subToggle && subMenu){
+    subToggle.addEventListener('click', function(e){
+      e.preventDefault();
+      var expanded = subToggle.getAttribute('aria-expanded') === 'true';
+      subToggle.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
+      subMenu.classList.toggle('is-open', !expanded);
+    });
+  }
+
   /* Highlight active page in drawer nav */
   var currentPath = window.location.pathname.split('/').pop() || 'index.html';
   if(drawer){
@@ -431,11 +445,13 @@
         a.classList.add('is-active');
         var parentSub = a.closest('.drawer__sub');
         if(parentSub){
+          parentSub.classList.add('is-open');
           var parentLi = parentSub.closest('li');
           if(parentLi){
-            var parentA = parentLi.querySelector(':scope > a');
-            if(parentA){
-              parentA.classList.add('is-parent-active');
+            var toggleBtn = parentLi.querySelector('.drawer__sub-toggle');
+            if(toggleBtn){
+              toggleBtn.setAttribute('aria-expanded', 'true');
+              toggleBtn.classList.add('is-parent-active');
             }
           }
         }

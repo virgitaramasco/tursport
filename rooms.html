@@ -39,8 +39,16 @@
       <li><a href="index.html" data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
       <li class="drawer__item--has-sub">
-        <a href="services.html" class="is-parent-active" data-i18n="nav_services">Services</a>
-        <ul class="drawer__sub">
+        <button type="button" class="drawer__sub-toggle is-parent-active" id="drawerServicesToggle" aria-expanded="true" aria-controls="drawerServicesSub">
+          <span class="drawer__sub-toggle-left">
+            <span data-i18n="nav_services">Services</span>
+          </span>
+          <svg class="drawer__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2.5 4.5L6 8L9.5 4.5"/>
+          </svg>
+        </button>
+        <ul class="drawer__sub is-open" id="drawerServicesSub">
+          <li><a href="services.html" data-i18n="nav_services_all">Tutti i servizi</a></li>
           <li><a href="rooms.html" aria-current="page" class="is-active" data-i18n="nav_rooms">Rooms / Apartments</a></li>
           <li><a href="sport.html" data-i18n="nav_sport">Sport</a></li>
           <li><a href="pool.html" data-i18n="nav_pool">Pool Club</a></li>

@@ -20,6 +20,7 @@ const files = [
 ];
 
 const subpages = [
+  { file: 'services.html', key: 'nav_services_all', label: 'Tutti i servizi' },
   { file: 'rooms.html', key: 'nav_rooms', label: 'Rooms / Apartments' },
   { file: 'sport.html', key: 'nav_sport', label: 'Sport' },
   { file: 'pool.html', key: 'nav_pool', label: 'Pool Club' },
@@ -30,15 +31,7 @@ const subpages = [
 ];
 
 function generateNav(currentFile) {
-  const isSubpage = subpages.some(s => s.file === currentFile);
-  const isServices = currentFile === 'services.html';
-
-  let servicesAttrs = 'data-i18n="nav_services"';
-  if (isServices) {
-    servicesAttrs = 'aria-current="page" class="is-active" data-i18n="nav_services"';
-  } else if (isSubpage) {
-    servicesAttrs = 'class="is-parent-active" data-i18n="nav_services"';
-  }
+  const isServicesOrSub = subpages.some(s => s.file === currentFile);
 
   const subItemsHtml = subpages.map(sub => {
     const isCur = sub.file === currentFile;
@@ -51,8 +44,15 @@ function generateNav(currentFile) {
       <li><a href="index.html" ${currentFile === 'index.html' || currentFile === 'Tursport Hotel Residence.html' ? 'aria-current="page" class="is-active" ' : ''}data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" ${currentFile === 'about.html' ? 'aria-current="page" class="is-active" ' : ''}data-i18n="nav_about">About Us</a></li>
       <li class="drawer__item--has-sub">
-        <a href="services.html" ${servicesAttrs}>Services</a>
-        <ul class="drawer__sub">
+        <button type="button" class="drawer__sub-toggle${isServicesOrSub ? ' is-parent-active' : ''}" id="drawerServicesToggle" aria-expanded="${isServicesOrSub ? 'true' : 'false'}" aria-controls="drawerServicesSub">
+          <span class="drawer__sub-toggle-left">
+            <span data-i18n="nav_services">Services</span>
+          </span>
+          <svg class="drawer__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2.5 4.5L6 8L9.5 4.5"/>
+          </svg>
+        </button>
+        <ul class="drawer__sub${isServicesOrSub ? ' is-open' : ''}" id="drawerServicesSub">
 ${subItemsHtml}
         </ul>
       </li>
