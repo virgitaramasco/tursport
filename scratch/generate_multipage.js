@@ -300,14 +300,14 @@ img {
   font-family: var(--font-text); font-weight: 600; font-size: 0.88rem; line-height: 1;
   letter-spacing: var(--letter-spacing-body);
 }
-.drawer nav ul { display: grid; gap: 0.15rem; }
+.drawer nav > ul { display: grid; gap: 0.2rem; }
 .drawer nav a {
   display: flex; align-items: center; gap: 0.65rem; padding: 0.25rem 0; text-decoration: none;
   font-family: var(--font-text); font-weight: 600;
   font-size: clamp(1.02rem, 1.6vw, 1.25rem); line-height: 1.25;
   letter-spacing: var(--letter-spacing-body);
   color: var(--ink);
-  transition: transform 0.35s ease, color 0.2s ease;
+  transition: transform 0.35s ease, color 0.2s ease, opacity 0.2s ease;
 }
 .drawer nav a:hover { transform: translateX(0.35rem); }
 .drawer nav a::before {
@@ -318,6 +318,39 @@ img {
 .drawer nav a.is-active::before { transform: scale(1); }
 .drawer nav a[aria-current="page"],
 .drawer nav a.is-active { font-weight: 700; }
+.drawer nav a.is-parent-active { font-weight: 700; }
+
+/* Submenu annidato sotto Services */
+.drawer__sub {
+  list-style: none;
+  display: grid;
+  gap: 0.12rem;
+  margin: 0.35rem 0 0.55rem 0.4rem;
+  padding-left: 1rem;
+  border-left: 1.5px solid var(--line);
+}
+.drawer nav .drawer__sub a {
+  font-size: clamp(0.88rem, 1.3vw, 0.98rem);
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 0.2rem 0;
+  color: var(--ink);
+  opacity: 0.82;
+  gap: 0.5rem;
+}
+.drawer nav .drawer__sub a:hover {
+  opacity: 1;
+  transform: translateX(0.25rem);
+}
+.drawer nav .drawer__sub a::before {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+.drawer nav .drawer__sub a[aria-current="page"],
+.drawer nav .drawer__sub a.is-active {
+  font-weight: 600;
+  opacity: 1;
+}
 .drawer__lang {
   border-top: 1px solid var(--line);
   padding-top: 0.9rem;
@@ -1221,6 +1254,16 @@ const jsContent = `(function(){
       if(href === currentPath || (currentPath === '' && href === 'index.html')){
         a.setAttribute('aria-current', 'page');
         a.classList.add('is-active');
+        var parentSub = a.closest('.drawer__sub');
+        if(parentSub){
+          var parentLi = parentSub.closest('li');
+          if(parentLi){
+            var parentA = parentLi.querySelector(':scope > a');
+            if(parentA){
+              parentA.classList.add('is-parent-active');
+            }
+          }
+        }
       }
     });
   }
@@ -1371,14 +1414,18 @@ function getHeader(activePage) {
     <ul>
       <li><a href="index.html" ${activePage === 'home' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" ${activePage === 'about' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_about">About Us</a></li>
-      <li><a href="services.html" ${activePage === 'services' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_services">Services</a></li>
-      <li><a href="rooms.html" ${activePage === 'rooms' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_rooms">Rooms / Apartments</a></li>
-      <li><a href="sport.html" ${activePage === 'sport' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_sport">Sport</a></li>
-      <li><a href="pool.html" ${activePage === 'pool' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_pool">Pool Club</a></li>
-      <li><a href="palazzetto.html" ${activePage === 'palazzetto' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
-      <li><a href="corporate.html" ${activePage === 'corporate' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_corporate">Eventi aziendali</a></li>
-      <li><a href="convention.html" ${activePage === 'convention' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_convention">Convention</a></li>
-      <li><a href="coworking.html" ${activePage === 'coworking' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_coworking">Co-work Spaces</a></li>
+      <li class="drawer__item--has-sub">
+        <a href="services.html" ${activePage === 'services' ? 'aria-current="page" class="is-active"' : (['rooms','sport','pool','palazzetto','corporate','convention','coworking'].includes(activePage) ? 'class="is-parent-active"' : '')} data-i18n="nav_services">Services</a>
+        <ul class="drawer__sub">
+          <li><a href="rooms.html" ${activePage === 'rooms' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_rooms">Rooms / Apartments</a></li>
+          <li><a href="sport.html" ${activePage === 'sport' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_sport">Sport</a></li>
+          <li><a href="pool.html" ${activePage === 'pool' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_pool">Pool Club</a></li>
+          <li><a href="palazzetto.html" ${activePage === 'palazzetto' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
+          <li><a href="corporate.html" ${activePage === 'corporate' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_corporate">Eventi aziendali</a></li>
+          <li><a href="convention.html" ${activePage === 'convention' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_convention">Convention</a></li>
+          <li><a href="coworking.html" ${activePage === 'coworking' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_coworking">Co-work Spaces</a></li>
+        </ul>
+      </li>
       <li><a href="newsletter.html" ${activePage === 'newsletter' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_newsletter">Newsletter</a></li>
       <li><a href="contatti.html" ${activePage === 'contatti' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_contact">Contact Us</a></li>
       <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a></li>

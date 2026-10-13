@@ -429,6 +429,16 @@
       if(href === currentPath || (currentPath === '' && href === 'index.html')){
         a.setAttribute('aria-current', 'page');
         a.classList.add('is-active');
+        var parentSub = a.closest('.drawer__sub');
+        if(parentSub){
+          var parentLi = parentSub.closest('li');
+          if(parentLi){
+            var parentA = parentLi.querySelector(':scope > a');
+            if(parentA){
+              parentA.classList.add('is-parent-active');
+            }
+          }
+        }
       }
     });
   }
