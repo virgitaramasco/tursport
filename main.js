@@ -172,7 +172,7 @@
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
-      nav_palazzetto: "Palazzetti Events",
+      nav_palazzetto: "Sports Events",
       nav_corporate: "Corporate Events",
       nav_convention: "Convention",
       nav_coworking: "Co-work Spaces",
