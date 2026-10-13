@@ -816,26 +816,26 @@ const jsContent = `(function(){
       hero_p1: "Interpreta una nuova idea di ospitalità che riunisce soggiorni, attività sportive, business ed eventi in un'unica realtà.",
       hero_p2: "Una storia che continua a evolversi, mantenendo al centro il piacere dell'accoglienza e la possibilità di vivere il Tursport in modi diversi.",
       
-      idx_rooms_title: "Rooms & Apartments",
+      idx_rooms_title: "Camere & Appartamenti",
       idx_rooms_desc: "Il piacere di sentirsi nel posto giusto.",
       idx_sport_title: "Sport",
       idx_sport_desc: "Lo spazio per mettersi in gioco.",
       idx_pool_title: "Pool Club",
       idx_pool_desc: "Il piacere di una pausa a bordo piscina.",
-      idx_events_title: "Events",
-      idx_events_desc: "Spazi per incontrarsi e condividere nuove idee.",
+      idx_events_title: "Eventi",
+      idx_events_desc: "Incontrarsi e condividere nuove idee.",
       idx_cowork_title: "Co-working",
       idx_cowork_desc: "Un luogo in cui dare spazio al lavoro.",
       
       about_h2: "Dal 1980, un punto d’incontro.",
-      about_lead: "Ci sono luoghi che nascono per accogliere. E altri che, nel tempo, diventano parte della storia di una città.",
-      about_p1: "Tursport nasce nel 1980 a San Vito, alle porte di Taranto, con una vocazione che va oltre l’ospitalità. Nel corso degli anni, ha accolto personalità di spicco del panorama italiano e internazionale, diventando un punto di riferimento per lo sport, la cultura e la vita del territorio.",
+      about_lead: "Ci sono luoghi che nascono per accogliere. Altri, con il tempo, entrano a far parte della storia di una città.",
+      about_p1: "Tursport nasce nel 1980 a San Vito, alle porte di Taranto, con una vocazione che va oltre l’ospitalità. Negli anni ha accolto personalità di spicco del panorama italiano e internazionale, diventando un punto di riferimento per lo sport, la cultura e la vita del territorio.",
       about_p2: "Una storia costruita attraverso le persone, le passioni e le occasioni di condivisione.",
-      about_p3: "Oggi Tursport continua a evolversi, in Un luogo che accoglie storie diverse e continua a crearne di nuove.",
+      about_p3: "Oggi Tursport continua a evolversi, in Un luogo che accoglie storie diverse e ne scrive di nuove.",
       
       gallery_h2: "Gli spazi, da vicino.",
       gallery_desc: "Scopri gli ambienti e i luoghi che compongono il mondo Tursport.",
-      gallery_btn: "Esplora la gallery",
+      gallery_btn: "Esplora la galleria",
       
       comm_h2: "Resta in contatto con Tursport.",
       comm_desc: "Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.",
@@ -846,10 +846,10 @@ const jsContent = `(function(){
       
       srv_h2: "Tutto ciò che rende unico il tuo soggiorno.",
       srv_lead: "Ospitalità, sport, business ed eventi si incontrano in una visione contemporanea dell’accoglienza.",
-      srv_p1: "Al Tursport Hotel Residence, camere e appartamenti si affiancano a spazi dedicati al benessere, all’attività sportiva, al lavoro e agli incontri. Un’offerta articolata che apre a possibilità diverse, adattandosi a esigenze e ritmi differenti.",
+      srv_p1: "Al Tursport Hotel Residence, camere e appartamenti si affiancano a spazi dedicati al benessere, allo sport, al lavoro e agli incontri, per adattarsi a esigenze e ritmi diversi.",
       srv_p2: "Scopri tutto ciò che Tursport ha da offrire.",
       
-      srv_rooms: "Rooms & Apartments",
+      srv_rooms: "Camere & Appartamenti",
       srv_sport: "Sport",
       srv_pool: "Pool Club",
       srv_palazzetto: "Eventi palazzetto",
@@ -858,7 +858,7 @@ const jsContent = `(function(){
       srv_coworking: "Co-work Spaces",
       
       rooms_h2: "Il tuo spazio, il tuo soggiorno.",
-      rooms_p1: "Al Tursport, l’ospitalità prende forma in camere e appartamenti indipendenti, distribuiti all’interno del residence. Ambienti pensati per accogliere soggiorni di piacere e viaggi di lavoro, con un’attenzione al comfort e alla libertà di vivere il proprio tempo.",
+      rooms_p1: "Al Tursport, l’ospitalità prende forma in camere e appartamenti indipendenti, distribuiti all’interno del residence. Sono ambienti pensati per soggiorni di piacere e viaggi di lavoro, con attenzione al comfort e alla libertà di vivere il proprio tempo.",
       rooms_p2: "Gli appartamenti portano il nome delle piante presenti nella struttura, un dettaglio che ne riflette il legame con il paesaggio circostante.",
       rooms_p3: "Scopri le sistemazioni e trova il tuo spazio al Tursport.",
       rooms_btn_discover: "Scopri le sistemazioni",
@@ -866,7 +866,7 @@ const jsContent = `(function(){
       
       sport_h2: "Lo sport fa parte della nostra storia.",
       sport_lead: "La vocazione sportiva è una parte importante dell'identità Tursport.",
-      sport_p1: "Al Tursport, lo sport è un modo di vivere gli spazi e condividere nuove energie. Dai campi da tennis alle superfici dedicate al beach tennis e al beach volley, fino al palazzetto per il basket, ogni impianto offre l’opportunità di coltivare la propria passione e trovare il proprio modo di mettersi in gioco.",
+      sport_p1: "Campi da tennis, superfici per il beach tennis e beach volley, palazzetto per il basket, piscina per il nuoto: ogni impianto è un’occasione per coltivare la propria passione e trovare il proprio modo di mettersi in gioco.",
       fac_tennis: "Campi da tennis",
       fac_beachtennis: "Beach tennis",
       fac_beachvolley: "Beach volley",
@@ -879,8 +879,8 @@ const jsContent = `(function(){
       pool_desc: "Un'oasi di serenità e relax a Capo San Vito: l'ampia piscina olimpionica immersa nel verde con solarium attrezzato, zona lounge e drink a bordo vasca.",
       pool_cta: "Rimani aggiornato",
       
-      events_arena_h2: "Lo spazio per il tuo gioco.",
-      events_arena_p1: "Il palazzetto Tursport è uno spazio dedicato allo sport e alle attività che prendono forma intorno ad esso. Pensato anche per il basket, può essere riservato per allenamenti, iniziative sportive ed eventi, con la possibilità di disporre dell’impianto per un’intera giornata.",
+      events_arena_h2: "Porta la tua squadra, o la tua idea.",
+      events_arena_p1: "Il palazzetto del Tursport è uno spazio dedicato allo sport e alle attività che prendono forma intorno ad esso. Pensato anche per il basket, può essere riservato per allenamenti, iniziative sportive ed eventi.",
       events_arena_p2: "Raccontaci cosa hai in mente: valuteremo insieme disponibilità e modalità di utilizzo.",
       events_arena_btn: "Richiedi un preventivo",
       
