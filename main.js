@@ -77,7 +77,9 @@
       fac_tennis: "Campi da tennis",
       fac_beachtennis: "Beach tennis",
       fac_beachvolley: "Beach volley",
+      fac_beach: "Beach volley & tennis",
       fac_basket: "Palazzetto per il basket",
+      fac_palestra: "Palestra",
       sport_p2: "Scopri gli impianti e trova lo spazio per il tuo prossimo match.",
       sport_btn: "Scopri gli impianti",
       
@@ -237,7 +239,9 @@
       fac_tennis: "Tennis courts",
       fac_beachtennis: "Beach tennis",
       fac_beachvolley: "Beach volley",
+      fac_beach: "Beach volleyball & tennis",
       fac_basket: "Basketball arena",
+      fac_palestra: "Fitness & Gym",
       sport_p2: "Explore our courts and book your next match.",
       sport_btn: "Discover facilities",
       
@@ -554,7 +558,7 @@
     { src: "sito/sito/DSCF1460.webp" },
     { src: "sito/sito/DSCF1538.webp" },
     { src: "sito/sito/DSCF1558.webp" },
-    { src: "sito/sito/foto2.webp" }
+    { src: "sito/sito/camere-app.webp" }
   ];
 
   var currentGalleryIdx = 0;
