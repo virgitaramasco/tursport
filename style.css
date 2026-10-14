@@ -41,7 +41,7 @@
 
   --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
   --space: clamp(3.5rem, 8vw, 6.5rem);
-  --head-h: clamp(5.2rem, 7.2vw, 6.6rem);
+  --head-h: clamp(4.6rem, 6.2vw, 5.4rem);
   --font-display: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --letter-spacing-body: -0.04em;
@@ -238,7 +238,7 @@ img {
 }
 .logo__img {
   display: block;
-  height: clamp(3.4rem, 5vw, 5.2rem);
+  height: clamp(2.6rem, 3.8vw, 3.9rem);
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -249,7 +249,7 @@ img {
   padding: 0;
 }
 .logo--footer .logo__img {
-  height: clamp(4.2rem, 6.5vw, 6.2rem);
+  height: clamp(3.4rem, 5vw, 4.8rem);
 }
 .header__right {
   justify-self: end;
@@ -833,12 +833,12 @@ img {
   .split-bleed { grid-template-columns: 1fr; min-height: auto; }
   .split-bleed .split__media { height: 360px; min-height: 300px; order: 0 !important; }
   .split-bleed .split__text { order: 1 !important; padding: 2.5rem var(--gutter); }
-  .logo__img { height: clamp(2.8rem, 6vw, 3.8rem); }
+  .logo__img { height: clamp(2.3rem, 4.6vw, 3.1rem); }
 }
 @media (max-width: 36rem) {
   .header__in { gap: 0.5rem; }
-  .logo__img { height: 2.75rem; max-width: 165px; }
-  .logo--footer .logo__img { height: clamp(3.2rem, 9vw, 4.4rem); max-width: 250px; }
+  .logo__img { height: 2.2rem; max-width: 145px; }
+  .logo--footer .logo__img { height: clamp(2.6rem, 7vw, 3.5rem); max-width: 210px; }
   .form { grid-template-columns: 1fr; }
   .index a {
     grid-template-columns: 1fr auto;
