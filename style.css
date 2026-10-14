@@ -330,14 +330,52 @@ img {
 .drawer nav a.is-active { font-weight: 700; }
 .drawer nav a.is-parent-active { font-weight: 700; }
 
-/* Submenu annidato sotto Services */
+/* Servizi toggle con freccina triangolare */
+.drawer nav a.drawer__services-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+.drawer nav a.drawer__services-toggle::before {
+  display: none !important;
+}
+.drawer__arrow {
+  display: inline-block;
+  width: 0.54rem;
+  height: 0.54rem;
+  margin-right: 0.15rem;
+  flex: none;
+  color: currentColor;
+  transform-origin: 50% 50%;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: rotate(0deg); /* punta in su (chiuso) */
+}
+.drawer__item--has-sub.is-expanded .drawer__arrow,
+.drawer__services-toggle[aria-expanded="true"] .drawer__arrow {
+  transform: rotate(180deg); /* punta in giù (aperto) */
+}
+
+/* Submenu collassabile sotto Services */
 .drawer__sub {
   list-style: none;
   display: grid;
   gap: 0.12rem;
-  margin: 0.35rem 0 0.55rem 0.4rem;
+  margin: 0 0 0 0.4rem;
   padding-left: 1rem;
   border-left: 1.5px solid var(--line);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.25s ease,
+              margin 0.35s ease,
+              visibility 0.35s ease;
+}
+.drawer__item--has-sub.is-expanded .drawer__sub {
+  max-height: 280px;
+  opacity: 1;
+  visibility: visible;
+  margin: 0.35rem 0 0.55rem 0.4rem;
 }
 .drawer nav .drawer__sub a {
   font-size: clamp(0.88rem, 1.3vw, 0.98rem);

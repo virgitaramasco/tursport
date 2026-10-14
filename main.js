@@ -376,6 +376,18 @@
   } catch(e) {}
 
 
+  
+  /* ---------- Drawer Services Accordion Toggle ---------- */
+  var servicesToggle = document.getElementById('servicesToggle');
+  var servicesItem = document.querySelector('.drawer__item--has-sub');
+  if (servicesToggle && servicesItem) {
+    servicesToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isExpanded = servicesItem.classList.toggle('is-expanded');
+      servicesToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    });
+  }
+
   /* ---------- Scroll Reveal (Slide Up) ---------- */
   if('IntersectionObserver' in window){
     var revealObserver = new IntersectionObserver(function(entries, observer){

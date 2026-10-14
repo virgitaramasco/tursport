@@ -73,8 +73,8 @@ function buildHeaderAndDrawer(currentFile) {
       <li><a href="index.html" ${currentFile === 'index.html' || currentFile === 'Tursport Hotel Residence.html' ? 'aria-current="page" class="is-active" ' : ''}data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" ${currentFile === 'about.html' ? 'aria-current="page" class="is-active" ' : ''}data-i18n="nav_about">About Us</a></li>
       <li class="drawer__item--has-sub">
-        <a href="services.html" ${servicesAttrs}>Services</a>
-        <ul class="drawer__sub">
+        <a href="services.html" class="drawer__services-toggle${currentFile === 'services.html' ? ' is-active' : (subpages.some(s => s.file === currentFile) ? ' is-parent-active' : '')}" id="servicesToggle" role="button" aria-expanded="false" aria-controls="drawerSub"${currentFile === 'services.html' ? ' aria-current="page"' : ''}><svg class="drawer__arrow" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true" focusable="false"><polygon points="5,1.5 9,8.5 1,8.5" fill="currentColor"/></svg><span data-i18n="nav_services">Services</span></a>
+        <ul class="drawer__sub" id="drawerSub">
 ${subHtml}
         </ul>
       </li>
