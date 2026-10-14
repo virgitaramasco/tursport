@@ -457,7 +457,11 @@
 
     var isScrolled = false;
     function updateHeaderOnScroll() {
-      var scrolled = (window.pageYOffset || document.documentElement.scrollTop || 0) > 40;
+      var heroRect = heroVideo.getBoundingClientRect();
+      var headHeight = header.offsetHeight || 70;
+      // Trasparente per tutta la durata della hero video: passa allo stato scrolled
+      // solo quando la hero video termina ed entra la sezione contenuti successiva
+      var scrolled = heroRect.bottom <= headHeight + 10;
       if (scrolled !== isScrolled) {
         isScrolled = scrolled;
         header.classList.toggle('header--scrolled', isScrolled);
