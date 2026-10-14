@@ -48,7 +48,7 @@ const cssContent = `/* ---------- Font Face: Times New Roman Condensed (Titoli) 
   --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
   --space: clamp(3.5rem, 8vw, 6.5rem);
   --head-h: 4rem;
-  --font-display: 'Times New Roman Condensed', "Times New Roman", Times, Georgia, serif;
+  --font-display: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --letter-spacing-body: -0.04em;
 
@@ -301,87 +301,33 @@ img {
   letter-spacing: var(--letter-spacing-body);
 }
 .drawer nav > ul { display: grid; gap: 0.2rem; }
-.drawer nav a,
-.drawer nav button.drawer__sub-toggle {
+.drawer nav a {
   display: flex; align-items: center; gap: 0.65rem; padding: 0.25rem 0; text-decoration: none;
   font-family: var(--font-text); font-weight: 600;
   font-size: clamp(1.02rem, 1.6vw, 1.25rem); line-height: 1.25;
   letter-spacing: var(--letter-spacing-body);
   color: var(--ink);
   transition: transform 0.35s ease, color 0.2s ease, opacity 0.2s ease;
-  background: none; border: 0; cursor: pointer; text-align: left; width: 100%;
 }
-.drawer nav a:hover,
-.drawer nav button.drawer__sub-toggle:hover {
-  transform: translateX(0.35rem);
-}
-.drawer nav a::before,
-.drawer nav button.drawer__sub-toggle .drawer__sub-toggle-left::before {
+.drawer nav a:hover { transform: translateX(0.35rem); }
+.drawer nav a::before {
   content: ""; width: 0.45rem; height: 0.45rem; border-radius: 50%;
   background: var(--ink); transform: scale(0); transition: transform 0.35s ease; flex: none;
 }
 .drawer nav a[aria-current="page"]::before,
-.drawer nav a.is-active::before,
-.drawer nav button.drawer__sub-toggle.is-active .drawer__sub-toggle-left::before,
-.drawer nav button.drawer__sub-toggle.is-parent-active .drawer__sub-toggle-left::before {
-  transform: scale(1);
-}
+.drawer nav a.is-active::before { transform: scale(1); }
 .drawer nav a[aria-current="page"],
-.drawer nav a.is-active,
-.drawer nav button.drawer__sub-toggle.is-active,
-.drawer nav button.drawer__sub-toggle.is-parent-active {
-  font-weight: 700;
-}
+.drawer nav a.is-active { font-weight: 700; }
+.drawer nav a.is-parent-active { font-weight: 700; }
 
-.drawer nav button.drawer__sub-toggle {
-  justify-content: space-between;
-}
-.drawer nav button.drawer__sub-toggle .drawer__sub-toggle-left {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-.drawer__arrow {
-  width: 1rem;
-  height: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink);
-  opacity: 0.75;
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
-  flex: none;
-  margin-right: 0.25rem;
-}
-.drawer nav button.drawer__sub-toggle:hover .drawer__arrow {
-  opacity: 1;
-}
-.drawer nav button.drawer__sub-toggle[aria-expanded="true"] .drawer__arrow {
-  transform: rotate(180deg);
-  opacity: 1;
-}
-
-/* Submenu annidato a tendina sotto Services */
+/* Submenu annidato sotto Services */
 .drawer__sub {
   list-style: none;
   display: grid;
   gap: 0.12rem;
-  margin: 0;
+  margin: 0.35rem 0 0.55rem 0.4rem;
   padding-left: 1rem;
   border-left: 1.5px solid var(--line);
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              opacity 0.28s ease,
-              margin 0.35s ease;
-}
-.drawer__sub.is-open {
-  max-height: 500px;
-  opacity: 1;
-  pointer-events: auto;
-  margin: 0.35rem 0 0.55rem 0.4rem;
 }
 .drawer nav .drawer__sub a {
   font-size: clamp(0.88rem, 1.3vw, 0.98rem);
@@ -391,7 +337,6 @@ img {
   color: var(--ink);
   opacity: 0.82;
   gap: 0.5rem;
-  width: auto;
 }
 .drawer nav .drawer__sub a:hover {
   opacity: 1;
@@ -888,7 +833,6 @@ const jsContent = `(function(){
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
-      nav_services_all: "Tutti i servizi",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -1050,7 +994,6 @@ const jsContent = `(function(){
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
-      nav_services_all: "All Services",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -1303,18 +1246,6 @@ const jsContent = `(function(){
     if(e.key === 'Escape' && drawer && drawer.classList.contains('is-open')){ setMenu(false); }
   });
 
-  /* Drawer Accordion Toggle for Services */
-  var subToggle = document.getElementById('drawerServicesToggle');
-  var subMenu = document.getElementById('drawerServicesSub');
-  if(subToggle && subMenu){
-    subToggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var expanded = subToggle.getAttribute('aria-expanded') === 'true';
-      subToggle.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
-      subMenu.classList.toggle('is-open', !expanded);
-    });
-  }
-
   /* Highlight active page in drawer nav */
   var currentPath = window.location.pathname.split('/').pop() || 'index.html';
   if(drawer){
@@ -1325,13 +1256,11 @@ const jsContent = `(function(){
         a.classList.add('is-active');
         var parentSub = a.closest('.drawer__sub');
         if(parentSub){
-          parentSub.classList.add('is-open');
           var parentLi = parentSub.closest('li');
           if(parentLi){
-            var toggleBtn = parentLi.querySelector('.drawer__sub-toggle');
-            if(toggleBtn){
-              toggleBtn.setAttribute('aria-expanded', 'true');
-              toggleBtn.classList.add('is-parent-active');
+            var parentA = parentLi.querySelector(':scope > a');
+            if(parentA){
+              parentA.classList.add('is-parent-active');
             }
           }
         }
@@ -1470,7 +1399,7 @@ function getHeader(activePage) {
         <span class="lang-sep" aria-hidden="true">|</span>
         <button type="button" class="lang-btn" id="langEn" data-lang="en" aria-pressed="false">ENG</button>
       </div>
-      <a class="btn book" href="contatti.html?motivo=Camere%20e%20appartamenti" data-i18n="book_btn">Book</a>
+      <a class="btn book" href="https://booking.tursport.it" target="_blank" rel="noopener" data-i18n="book_btn">Book</a>
     </div>
   </div>
 </header>
@@ -1486,46 +1415,19 @@ function getHeader(activePage) {
       <li><a href="index.html" ${activePage === 'home' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" ${activePage === 'about' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_about">About Us</a></li>
       <li class="drawer__item--has-sub">
-        <button type="button" class="drawer__sub-toggle${['services','rooms','sport','pool','palazzetto','corporate','convention','coworking'].includes(activePage) ? ' is-parent-active' : ''}" id="drawerServicesToggle" aria-expanded="${['services','rooms','sport','pool','palazzetto','corporate','convention','coworking'].includes(activePage) ? 'true' : 'false'}" aria-controls="drawerServicesSub">
-          <span class="drawer__sub-toggle-left">
-            <span data-i18n="nav_services">Services</span>
-          </span>
-          <svg class="drawer__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2.5 4.5L6 8L9.5 4.5"/>
-          </svg>
-        </button>
-        <ul class="drawer__sub${['services','rooms','sport','pool','palazzetto','corporate','convention','coworking'].includes(activePage) ? ' is-open' : ''}" id="drawerServicesSub">
-          <li><a href="services.html" ${activePage === 'services' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_services_all">Tutti i servizi</a></li>
+        <a href="services.html" ${activePage === 'services' ? 'aria-current="page" class="is-active"' : (['rooms','sport','pool','palazzetto','corporate'].includes(activePage) ? 'class="is-parent-active"' : '')} data-i18n="nav_services">Services</a>
+        <ul class="drawer__sub">
           <li><a href="rooms.html" ${activePage === 'rooms' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_rooms">Rooms / Apartments</a></li>
           <li><a href="sport.html" ${activePage === 'sport' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_sport">Sport</a></li>
           <li><a href="pool.html" ${activePage === 'pool' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_pool">Pool Club</a></li>
           <li><a href="palazzetto.html" ${activePage === 'palazzetto' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
           <li><a href="corporate.html" ${activePage === 'corporate' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_corporate">Eventi aziendali</a></li>
-          <li><a href="convention.html" ${activePage === 'convention' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_convention">Convention</a></li>
-          <li><a href="coworking.html" ${activePage === 'coworking' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_coworking">Co-work Spaces</a></li>
         </ul>
       </li>
       <li><a href="newsletter.html" ${activePage === 'newsletter' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_newsletter">Newsletter</a></li>
       <li><a href="contatti.html" ${activePage === 'contatti' ? 'aria-current="page" class="is-active"' : ''} data-i18n="nav_contact">Contact Us</a></li>
-      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a></li>
     </ul>
   </nav>
-  <div class="drawer__lang">
-    <span class="drawer__lang-label">Lingua / Language</span>
-    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Selezione lingua">
-      <button type="button" class="lang-btn is-active" data-lang="it">IT</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang="en">ENG</button>
-    </div>
-  </div>
-  <div class="drawer__contact">
-    <p>Via del Faro, 58<br>74122 San Vito – Taranto</p>
-    <p style="margin-top:.4rem"><a href="tel:+390997330111">+39 099 733 0111</a></p>
-    <p><a href="mailto:booking@tursport.it">booking@tursport.it</a></p>
-  </div>
-  <div class="drawer__ig">
-    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a>
-  </div>
 </aside>`;
 }
 
@@ -1550,7 +1452,7 @@ function getFooter() {
       <div class="footer__col">
         <h2 data-i18n="footer_col_follow">Seguici</h2>
         <ul>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.instagram.com/tursport.hotel/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://wa.me/393926283171">WhatsApp</a></li>
         </ul>
       </div>

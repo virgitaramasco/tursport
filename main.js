@@ -8,7 +8,6 @@
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
-      nav_services_all: "Tutti i servizi",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -33,8 +32,7 @@
       idx_pool_desc: "Il piacere di una pausa a bordo piscina.",
       idx_events_title: "Eventi",
       idx_events_desc: "Incontrarsi e condividere nuove idee.",
-      idx_cowork_title: "Co-working",
-      idx_cowork_desc: "Un luogo in cui dare spazio al lavoro.",
+      btn_discover: "Scopri \u2197",
       
       about_h2: "Dal 1980, un punto d’incontro.",
       about_lead: "Ci sono luoghi che nascono per accogliere. Altri, con il tempo, entrano a far parte della storia di una città.",
@@ -170,7 +168,6 @@
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
-      nav_services_all: "All Services",
       nav_rooms: "Rooms / Apartments",
       nav_sport: "Sport",
       nav_pool: "Pool Club",
@@ -195,8 +192,7 @@
       idx_pool_desc: "The joy of relaxing poolside.",
       idx_events_title: "Events",
       idx_events_desc: "Connecting and sharing new ideas.",
-      idx_cowork_title: "Co-working",
-      idx_cowork_desc: "A dedicated environment for focused work.",
+      btn_discover: "Explore \u2197",
       
       about_h2: "Since 1980, a gathering point.",
       about_lead: "Some places are born to welcome. Others, with time, become woven into the story of a city.",
@@ -423,18 +419,6 @@
     if(e.key === 'Escape' && drawer && drawer.classList.contains('is-open')){ setMenu(false); }
   });
 
-  /* Drawer Accordion Toggle for Services */
-  var subToggle = document.getElementById('drawerServicesToggle');
-  var subMenu = document.getElementById('drawerServicesSub');
-  if(subToggle && subMenu){
-    subToggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var expanded = subToggle.getAttribute('aria-expanded') === 'true';
-      subToggle.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
-      subMenu.classList.toggle('is-open', !expanded);
-    });
-  }
-
   /* Highlight active page in drawer nav */
   var currentPath = window.location.pathname.split('/').pop() || 'index.html';
   if(drawer){
@@ -445,13 +429,11 @@
         a.classList.add('is-active');
         var parentSub = a.closest('.drawer__sub');
         if(parentSub){
-          parentSub.classList.add('is-open');
           var parentLi = parentSub.closest('li');
           if(parentLi){
-            var toggleBtn = parentLi.querySelector('.drawer__sub-toggle');
-            if(toggleBtn){
-              toggleBtn.setAttribute('aria-expanded', 'true');
-              toggleBtn.classList.add('is-parent-active');
+            var parentA = parentLi.querySelector(':scope > a');
+            if(parentA){
+              parentA.classList.add('is-parent-active');
             }
           }
         }
@@ -482,13 +464,28 @@
     });
   });
 
-  /* ---------- Fullscreen Lightbox Gallery Controller ---------- */
+  /* ---------- Fullscreen Lightbox Gallery Controller (20 Immagini) ---------- */
   var galleryImages = [
     { src: "sito/sito/DSCF1194.webp" },
-    { src: "sito/sito/foto1.webp" },
     { src: "sito/sito/DSCF0705.webp" },
     { src: "sito/sito/DSCF1403.webp" },
-    { src: "sito/sito/DSCF1011.webp" }
+    { src: "sito/sito/DSCF1011.webp" },
+    { src: "sito/sito/DSCF1550.webp" },
+    { src: "sito/sito/DSCF1240.webp" },
+    { src: "sito/sito/DSCF1202.webp" },
+    { src: "sito/sito/DSCF0744.webp" },
+    { src: "sito/sito/DSCF0786.webp" },
+    { src: "sito/sito/DSCF0801.webp" },
+    { src: "sito/sito/DSCF0823.webp" },
+    { src: "sito/sito/DSCF1418.webp" },
+    { src: "sito/sito/DSCF1051.webp" },
+    { src: "sito/sito/DSCF1017.webp" },
+    { src: "sito/sito/DSCF0843.webp" },
+    { src: "sito/sito/DSCF1244.webp" },
+    { src: "sito/sito/DSCF1460.webp" },
+    { src: "sito/sito/DSCF1538.webp" },
+    { src: "sito/sito/DSCF1558.webp" },
+    { src: "sito/sito/foto2.webp" }
   ];
 
   var currentGalleryIdx = 0;

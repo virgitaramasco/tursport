@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>About Us | Tursport Hotel Residence</title>
 <meta name="description" content="Tursport nasce nel 1980 a Capo San Vito, Taranto: una storia di accoglienza, sport e territorio.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+<link rel="icon" href="LogoTursportsingolo.svg" type="image/svg+xml"><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
         <span class="lang-sep" aria-hidden="true">|</span>
         <button type="button" class="lang-btn" id="langEn" data-lang="en" aria-pressed="false">ENG</button>
       </div>
-      <a class="btn book" href="contatti.html?motivo=Camere%20e%20appartamenti" data-i18n="book_btn">Book</a>
+      <a class="btn book" href="https://booking.tursport.it" target="_blank" rel="noopener" data-i18n="book_btn">Book</a>
     </div>
   </div>
 </header>
@@ -39,46 +39,19 @@
       <li><a href="index.html" data-i18n="nav_home">Home</a></li>
       <li><a href="about.html" aria-current="page" class="is-active" data-i18n="nav_about">About Us</a></li>
       <li class="drawer__item--has-sub">
-        <button type="button" class="drawer__sub-toggle" id="drawerServicesToggle" aria-expanded="false" aria-controls="drawerServicesSub">
-          <span class="drawer__sub-toggle-left">
-            <span data-i18n="nav_services">Services</span>
-          </span>
-          <svg class="drawer__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2.5 4.5L6 8L9.5 4.5"/>
-          </svg>
-        </button>
-        <ul class="drawer__sub" id="drawerServicesSub">
-          <li><a href="services.html" data-i18n="nav_services_all">Tutti i servizi</a></li>
+        <a href="services.html" data-i18n="nav_services">Services</a>
+        <ul class="drawer__sub">
           <li><a href="rooms.html" data-i18n="nav_rooms">Rooms / Apartments</a></li>
           <li><a href="sport.html" data-i18n="nav_sport">Sport</a></li>
           <li><a href="pool.html" data-i18n="nav_pool">Pool Club</a></li>
           <li><a href="palazzetto.html" data-i18n="nav_palazzetto">Eventi palazzetto</a></li>
           <li><a href="corporate.html" data-i18n="nav_corporate">Eventi aziendali</a></li>
-          <li><a href="convention.html" data-i18n="nav_convention">Convention</a></li>
-          <li><a href="coworking.html" data-i18n="nav_coworking">Co-work Spaces</a></li>
         </ul>
       </li>
       <li><a href="newsletter.html" data-i18n="nav_newsletter">Newsletter</a></li>
       <li><a href="contatti.html" data-i18n="nav_contact">Contact Us</a></li>
-      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a></li>
     </ul>
   </nav>
-  <div class="drawer__lang">
-    <span class="drawer__lang-label">Lingua / Language</span>
-    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Selezione lingua">
-      <button type="button" class="lang-btn is-active" data-lang="it">IT</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang="en">ENG</button>
-    </div>
-  </div>
-  <div class="drawer__contact">
-    <p>Via del Faro, 58<br>74122 San Vito – Taranto</p>
-    <p style="margin-top:.4rem"><a href="tel:+390997330111">+39 099 733 0111</a></p>
-    <p><a href="mailto:booking@tursport.it">booking@tursport.it</a></p>
-  </div>
-  <div class="drawer__ig">
-    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram &#x2197;</a>
-  </div>
 </aside>
 <main id="main">
 
@@ -106,12 +79,28 @@
       
       <!-- Galleria Fotografica AL VIVO con trigger Lightbox -->
       <div class="gallery__grid--bleed reveal reveal-delay-1">
-        <div class="g1"><div class="ph" data-gallery-idx="0"><img src="sito/sito/DSCF1194.webp" alt="Tursport" loading="lazy"></div></div>
-        <div class="g2"><div class="ph" data-gallery-idx="1"><img src="sito/sito/foto1.webp" alt="Tursport" loading="lazy"></div></div>
-        <div class="g3"><div class="ph" data-gallery-idx="2"><img src="sito/sito/DSCF0705.webp" alt="Tursport" loading="lazy"></div></div>
-        <div class="g4"><div class="ph" data-gallery-idx="3"><img src="sito/sito/DSCF1403.webp" alt="Tursport" loading="lazy"></div></div>
-        <div class="g5"><div class="ph" data-gallery-idx="4"><img src="sito/sito/DSCF1011.webp" alt="Tursport" loading="lazy"></div></div>
+        <div class="g-span-7"><div class="ph" data-gallery-idx="0"><img src="sito/sito/DSCF1194.webp" alt="Piscina principale Tursport" loading="lazy"></div></div>
+        <div class="g-span-5"><div class="ph" data-gallery-idx="1"><img src="sito/sito/DSCF0705.webp" alt="Colazione a bordo piscina" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="2"><img src="sito/sito/DSCF1403.webp" alt="Parco e verde mediterraneo" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="3"><img src="sito/sito/DSCF1011.webp" alt="Camere e design" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="4"><img src="sito/sito/DSCF1550.webp" alt="Architettura Tursport Hotel Residence" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="5"><img src="sito/sito/DSCF1240.webp" alt="Campi da tennis in terra rossa" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="6"><img src="sito/sito/DSCF1202.webp" alt="Piscina e solarium" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="7"><img src="sito/sito/DSCF0744.webp" alt="Palazzetto dello sport" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="8"><img src="sito/sito/DSCF0786.webp" alt="Lounge e spazi meeting" loading="lazy"></div></div>
+        <div class="g-span-6"><div class="ph" data-gallery-idx="9"><img src="sito/sito/DSCF0801.webp" alt="Campi da beach tennis e fitness" loading="lazy"></div></div>
+        <div class="g-span-6"><div class="ph" data-gallery-idx="10"><img src="sito/sito/DSCF0823.webp" alt="Sala meeting ed eventi aziendali" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="11"><img src="sito/sito/DSCF1418.webp" alt="Giardini e vegetazione curata" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="12"><img src="sito/sito/DSCF1051.webp" alt="Sistemazioni indipendenti" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="13"><img src="sito/sito/DSCF1017.webp" alt="Dettagli e comfort" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="14"><img src="sito/sito/DSCF0843.webp" alt="Atmosfere serali" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="15"><img src="sito/sito/DSCF1244.webp" alt="Campi da beach volley" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="16"><img src="sito/sito/DSCF1460.webp" alt="Viali del resort" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="17"><img src="sito/sito/DSCF1538.webp" alt="Hall e accoglienza" loading="lazy"></div></div>
+        <div class="g-span-5"><div class="ph" data-gallery-idx="18"><img src="sito/sito/DSCF1558.webp" alt="Panoramica dall'alto del Tursport" loading="lazy"></div></div>
+        <div class="g-span-7"><div class="ph" data-gallery-idx="19"><img src="sito/sito/foto2.webp" alt="Camera residence" loading="lazy"></div></div>
       </div>
+    </div>
     </div>
 
     <!-- Modal Galleria Fullscreen Navigabile -->
@@ -121,7 +110,7 @@
       <div class="gallery-modal__stage">
         <img id="galleryModalImg" src="sito/sito/DSCF1194.webp" alt="Galleria Tursport">
         <div class="gallery-modal__caption">
-          <span id="galleryModalCounter" class="gallery-modal__counter">1 / 5</span>
+          <span id="galleryModalCounter" class="gallery-modal__counter">1 / 20</span>
         </div>
       </div>
       <button class="gallery-modal__nav gallery-modal__next" id="galleryNext" aria-label="Immagine successiva">&#x276F;</button>
@@ -169,7 +158,7 @@
       <div class="footer__col">
         <h2 data-i18n="footer_col_follow">Seguici</h2>
         <ul>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.instagram.com/tursport.hotel/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://wa.me/393926283171">WhatsApp</a></li>
         </ul>
       </div>
