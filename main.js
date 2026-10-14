@@ -448,6 +448,26 @@
     });
   }
 
+
+  /* ---------- Header Transparent on Hero Video & Scroll Transition ---------- */
+  var header = document.querySelector('.header');
+  var heroVideo = document.querySelector('.page-hero--video');
+  if (header && heroVideo) {
+    header.classList.add('header--transparent');
+
+    var isScrolled = false;
+    function updateHeaderOnScroll() {
+      var scrolled = (window.pageYOffset || document.documentElement.scrollTop || 0) > 40;
+      if (scrolled !== isScrolled) {
+        isScrolled = scrolled;
+        header.classList.toggle('header--scrolled', isScrolled);
+      }
+    }
+
+    window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+    updateHeaderOnScroll();
+  }
+
   /* ---------- Scroll Reveal (Slide Up) ---------- */
   if('IntersectionObserver' in window){
     var revealObserver = new IntersectionObserver(function(entries, observer){
