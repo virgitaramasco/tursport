@@ -1392,7 +1392,7 @@ function getHeader(activePage) {
       <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span>
       <span class="menu-btn__label" data-i18n="menu_btn">Menu</span>
     </button>
-    <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+    <a class="logo" href="index.html" aria-label="Tursport Hotel Residence, Home"><img src="logotursportesteso.svg" alt="Tursport Hotel Residence" class="logo__img"></a>
     <div class="header__right">
       <div class="lang-switch" role="group" aria-label="Selezione lingua / Language selection">
         <button type="button" class="lang-btn is-active" id="langIt" data-lang="it" aria-pressed="true">IT</button>
@@ -1438,7 +1438,7 @@ function getFooter() {
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="Tursport, Home">TURSPORT</a>
+        <a class="logo logo--footer" href="index.html" aria-label="Tursport Hotel Residence, Home"><img src="logotursportesteso.svg" alt="Tursport Hotel Residence" class="logo__img"></a>
         <p style="margin-top:.85rem" data-i18n="footer_desc">Hotel Residence a Capo San Vito, Taranto.</p>
       </div>
       <div class="footer__col">

@@ -225,15 +225,29 @@ img {
 .menu-btn__icon i:last-child { width: 70%; }
 .menu-btn:hover .menu-btn__icon i:last-child { width: 100%; }
 .logo {
-  justify-self: center; text-decoration: none;
-  font-family: var(--font-text); font-weight: 700;
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1;
-  letter-spacing: 0.12em; display: inline-flex; align-items: center; gap: 0.45rem;
-  color: var(--ink);
+  justify-self: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.logo::after {
-  content: ""; width: 0.4em; height: 0.4em; border-radius: 50%;
-  background: var(--ink); box-shadow: 0 0 0 1px var(--bg);
+.logo:hover {
+  opacity: 0.82;
+}
+.logo__img {
+  display: block;
+  height: clamp(1.45rem, 2.5vw, 2.05rem);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.logo--footer {
+  justify-self: start;
+  margin-bottom: 0.4rem;
+}
+.logo--footer .logo__img {
+  height: clamp(1.75rem, 3vw, 2.35rem);
 }
 .header__right {
   justify-self: end;
