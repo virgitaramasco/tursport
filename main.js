@@ -32,7 +32,7 @@
       idx_pool_desc: "Il piacere di una pausa a bordo piscina.",
       idx_events_title: "Eventi",
       idx_events_desc: "Incontrarsi e condividere nuove idee.",
-      btn_discover: "Scopri \u2197",
+      btn_discover: "Scopri",
       
       about_h2: "Dal 1980, un punto d’incontro.",
       about_lead: "Ci sono luoghi che nascono per accogliere. Altri, con il tempo, entrano a far parte della storia di una città.",
@@ -194,7 +194,7 @@
       idx_pool_desc: "The joy of relaxing poolside.",
       idx_events_title: "Events",
       idx_events_desc: "Connecting and sharing new ideas.",
-      btn_discover: "Explore \u2197",
+      btn_discover: "Explore",
       
       about_h2: "Since 1980, a gathering point.",
       about_lead: "Some places are born to welcome. Others, with time, become woven into the story of a city.",
