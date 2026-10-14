@@ -377,14 +377,70 @@
 
 
   
-  /* ---------- Drawer Services Accordion Toggle ---------- */
+  /* ---------- Drawer Services Accordion Toggle & Navigation ---------- */
   var servicesToggle = document.getElementById('servicesToggle');
   var servicesItem = document.querySelector('.drawer__item--has-sub');
+
   if (servicesToggle && servicesItem) {
+    var servicesClickCount = 0;
+
+    // Se arriviamo dal 2° clic da un'altra pagina, il menu servizi si presenta aperto
+    try {
+      if (sessionStorage.getItem('tursport_services_open') === 'true') {
+        sessionStorage.removeItem('tursport_services_open');
+        servicesItem.classList.add('is-expanded');
+        servicesToggle.setAttribute('aria-expanded', 'true');
+        servicesClickCount = 2;
+      }
+    } catch(e) {}
+
     servicesToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      var isExpanded = servicesItem.classList.toggle('is-expanded');
-      servicesToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      var isArrowClick = e.target.closest('.drawer__arrow') !== null;
+
+      // Clic diretto sulla freccina triangolare: apre/chiude sempre
+      if (isArrowClick) {
+        e.preventDefault();
+        var isOpen = servicesItem.classList.toggle('is-expanded');
+        servicesToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        servicesClickCount = isOpen ? 1 : 0;
+        return;
+      }
+
+      // Clic su Services:
+      // 1° clic: apre il sottomenu (freccia giù)
+      // 2° clic: apre la pagina services.html
+      // 3° clic: richiude il sottomenu (freccia su)
+      if (!servicesItem.classList.contains('is-expanded')) {
+        // 1° clic: apre
+        e.preventDefault();
+        servicesItem.classList.add('is-expanded');
+        servicesToggle.setAttribute('aria-expanded', 'true');
+        servicesClickCount = 1;
+      } else {
+        if (servicesClickCount === 1) {
+          // 2° clic: naviga alla pagina services.html
+          e.preventDefault();
+          servicesClickCount = 2;
+          try { sessionStorage.setItem('tursport_services_open', 'true'); } catch(err) {}
+          window.location.href = 'services.html';
+        } else {
+          // 3° clic: richiuditi
+          e.preventDefault();
+          servicesItem.classList.remove('is-expanded');
+          servicesToggle.setAttribute('aria-expanded', 'false');
+          servicesClickCount = 0;
+        }
+      }
+    });
+
+    // Supporto al doppio clic rapido (dblclick)
+    servicesToggle.addEventListener('dblclick', function(e) {
+      var isArrowClick = e.target.closest('.drawer__arrow') !== null;
+      if (!isArrowClick) {
+        e.preventDefault();
+        try { sessionStorage.setItem('tursport_services_open', 'true'); } catch(err) {}
+        window.location.href = 'services.html';
+      }
     });
   }
 
