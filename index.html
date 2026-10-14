@@ -55,8 +55,15 @@
 </aside>
 <main id="main">
 
-<section class="page-hero">
-  <div class="wrap">
+<section class="page-hero page-hero--video">
+  <div class="hero-video-bg" aria-hidden="true">
+    <video class="hero-video-bg__media" autoplay muted loop playsinline poster="hero-video-poster.webp">
+      <source src="herovideo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-bg__overlay"></div>
+  </div>
+
+  <div class="wrap page-hero__content">
     <h1 class="h1-page reveal">
       <span><span data-i18n="hero_title_1">Tursport</span></span>
       <span><span data-i18n="hero_title_2">Hotel Residence</span></span>
@@ -71,15 +78,9 @@
       </div>
     </div>
   </div>
-
-  <div class="bleed-media reveal reveal-delay-2">
-    <div class="ph">
-      <img src="sito/sito/DSCF1550.webp" alt="Tursport Hotel Residence - Capo San Vito, Taranto" loading="eager">
-    </div>
-  </div>
 </section>
 
-<section class="sec" style="padding-top:0" aria-label="Sezioni della homepage">
+<section class="sec" aria-label="Sezioni della homepage">
   <div class="wrap">
     <ul class="index">
       <li class="reveal">

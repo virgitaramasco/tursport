@@ -375,6 +375,17 @@
     }
   } catch(e) {}
 
+  
+  /* ---------- Background Video Auto-play Robustness ---------- */
+  var bgVideo = document.querySelector('.hero-video-bg__media');
+  if (bgVideo) {
+    bgVideo.muted = true;
+    var playProm = bgVideo.play();
+    if (playProm !== undefined) {
+      playProm.catch(function(){ /* autoplay prevented or power saving */ });
+    }
+  }
+
   /* ---------- Scroll Reveal (Slide Up) ---------- */
   if('IntersectionObserver' in window){
     var revealObserver = new IntersectionObserver(function(entries, observer){
