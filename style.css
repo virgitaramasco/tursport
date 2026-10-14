@@ -41,7 +41,7 @@
 
   --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
   --space: clamp(3.5rem, 8vw, 6.5rem);
-  --head-h: 4rem;
+  --head-h: clamp(5.2rem, 7.2vw, 6.6rem);
   --font-display: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --letter-spacing-body: -0.04em;
@@ -230,24 +230,26 @@ img {
   display: inline-flex;
   align-items: center;
   line-height: 0;
+  padding: 0.25rem 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .logo:hover {
-  opacity: 0.82;
+  opacity: 0.85;
 }
 .logo__img {
   display: block;
-  height: clamp(1.45rem, 2.5vw, 2.05rem);
+  height: clamp(3.4rem, 5vw, 5.2rem);
   width: auto;
   max-width: 100%;
   object-fit: contain;
 }
 .logo--footer {
   justify-self: start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.85rem;
+  padding: 0;
 }
 .logo--footer .logo__img {
-  height: clamp(1.75rem, 3vw, 2.35rem);
+  height: clamp(4.2rem, 6.5vw, 6.2rem);
 }
 .header__right {
   justify-self: end;
@@ -831,8 +833,12 @@ img {
   .split-bleed { grid-template-columns: 1fr; min-height: auto; }
   .split-bleed .split__media { height: 360px; min-height: 300px; order: 0 !important; }
   .split-bleed .split__text { order: 1 !important; padding: 2.5rem var(--gutter); }
+  .logo__img { height: clamp(2.8rem, 6vw, 3.8rem); }
 }
 @media (max-width: 36rem) {
+  .header__in { gap: 0.5rem; }
+  .logo__img { height: 2.75rem; max-width: 165px; }
+  .logo--footer .logo__img { height: clamp(3.2rem, 9vw, 4.4rem); max-width: 250px; }
   .form { grid-template-columns: 1fr; }
   .index a {
     grid-template-columns: 1fr auto;

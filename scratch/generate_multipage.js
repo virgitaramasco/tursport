@@ -47,7 +47,7 @@ const cssContent = `/* ---------- Font Face: Times New Roman Condensed (Titoli) 
 
   --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
   --space: clamp(3.5rem, 8vw, 6.5rem);
-  --head-h: 4rem;
+  --head-h: clamp(5.2rem, 7.2vw, 6.6rem);
   --font-display: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: 'Helvetica Neue Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --letter-spacing-body: -0.04em;
@@ -231,15 +231,31 @@ img {
 .menu-btn__icon i:last-child { width: 70%; }
 .menu-btn:hover .menu-btn__icon i:last-child { width: 100%; }
 .logo {
-  justify-self: center; text-decoration: none;
-  font-family: var(--font-text); font-weight: 700;
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1;
-  letter-spacing: 0.12em; display: inline-flex; align-items: center; gap: 0.45rem;
-  color: var(--ink);
+  justify-self: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  padding: 0.25rem 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.logo::after {
-  content: ""; width: 0.4em; height: 0.4em; border-radius: 50%;
-  background: var(--ink); box-shadow: 0 0 0 1px var(--bg);
+.logo:hover {
+  opacity: 0.85;
+}
+.logo__img {
+  display: block;
+  height: clamp(3.4rem, 5vw, 5.2rem);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.logo--footer {
+  justify-self: start;
+  margin-bottom: 0.85rem;
+  padding: 0;
+}
+.logo--footer .logo__img {
+  height: clamp(4.2rem, 6.5vw, 6.2rem);
 }
 .header__right {
   justify-self: end;
