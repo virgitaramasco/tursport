@@ -1034,6 +1034,14 @@ img {
   .about__head .h1-page, .about__lead, .about__body,
   .community__text, .community form,
   .contact__info, .contact__form { grid-column: 1 / -1; }
+  .page-hero--video .h1-page {
+    font-size: clamp(1.6rem, 5.2vw, 2.8rem);
+    white-space: nowrap;
+    letter-spacing: -0.035em;
+  }
+  .page-hero--video .h1-page span {
+    display: inline;
+  }
   .gallery__grid--bleed {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 3px !important;
@@ -1081,6 +1089,14 @@ img {
 @media (max-width: 36rem) {
   .header__in { gap: 0.5rem; }
   .page-hero--video { min-height: 100vh; min-height: 100svh; min-height: 100dvh; padding-top: calc(var(--head-h) + env(safe-area-inset-top, 0px) + 1.25rem); padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px)); }
+  .page-hero--video .h1-page {
+    font-size: clamp(1.2rem, 5.7vw, 1.85rem);
+    white-space: nowrap;
+    letter-spacing: -0.035em;
+  }
+  .page-hero--video .h1-page span {
+    display: inline;
+  }
   .logo__img { height: 2.2rem; max-width: 145px; }
   .logo--footer .logo__img { height: clamp(2.6rem, 7vw, 3.5rem); max-width: 210px; }
   .form { grid-template-columns: 1fr; }
