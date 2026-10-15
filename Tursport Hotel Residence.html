@@ -132,8 +132,56 @@
         </a>
       </li>
     </ul>
+
+    <!-- Sezione Gallery -->
+    <div class="gallery" id="gallery">
+      <div class="gallery__head reveal">
+        <div>
+          <h2 class="h2" style="margin-bottom:.8rem" data-i18n="gallery_h2">Gli spazi, da vicino.</h2>
+          <p data-i18n="gallery_desc">Scopri gli ambienti e i luoghi che compongono il mondo Tursport.</p>
+        </div>
+        <button type="button" class="btn" id="openGalleryBtn" data-i18n="gallery_btn">Esplora la galleria</button>
+      </div>
+      
+      <!-- Galleria Fotografica AL VIVO con trigger Lightbox -->
+      <div class="gallery__grid--bleed reveal reveal-delay-1">
+        <div class="g-span-7"><div class="ph" data-gallery-idx="0"><img src="sito/sito/DSCF1194.webp" alt="Piscina principale Tursport" loading="lazy"></div></div>
+        <div class="g-span-5"><div class="ph" data-gallery-idx="1"><img src="sito/sito/DSCF0705.webp" alt="Colazione a bordo piscina" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="2"><img src="sito/sito/DSCF1403.webp" alt="Parco e verde mediterraneo" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="3"><img src="sito/sito/DSCF1011.webp" alt="Camere e design" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="4"><img src="sito/sito/DSCF1550.webp" alt="Architettura Tursport Hotel Residence" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="5"><img src="sito/sito/DSCF1240.webp" alt="Campi da tennis in terra rossa" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="6"><img src="sito/sito/DSCF1202.webp" alt="Piscina e solarium" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="7"><img src="sito/sito/DSCF0744.webp" alt="Palazzetto dello sport" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="8"><img src="sito/sito/DSCF0786.webp" alt="Lounge e spazi meeting" loading="lazy"></div></div>
+        <div class="g-span-6"><div class="ph" data-gallery-idx="9"><img src="sito/sito/DSCF0801.webp" alt="Campi da beach tennis e fitness" loading="lazy"></div></div>
+        <div class="g-span-6"><div class="ph" data-gallery-idx="10"><img src="sito/sito/DSCF0823.webp" alt="Sala meeting ed eventi aziendali" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="11"><img src="sito/sito/DSCF1418.webp" alt="Giardini e vegetazione curata" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="12"><img src="sito/sito/DSCF1051.webp" alt="Sistemazioni indipendenti" loading="lazy"></div></div>
+        <div class="g-span-4"><div class="ph" data-gallery-idx="13"><img src="sito/sito/DSCF1017.webp" alt="Dettagli e comfort" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="14"><img src="sito/sito/DSCF0843.webp" alt="Atmosfere serali" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="15"><img src="sito/sito/DSCF1244.webp" alt="Campi da beach volley" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="16"><img src="sito/sito/DSCF1460.webp" alt="Viali del resort" loading="lazy"></div></div>
+        <div class="g-span-3"><div class="ph" data-gallery-idx="17"><img src="sito/sito/DSCF1538.webp" alt="Hall e accoglienza" loading="lazy"></div></div>
+        <div class="g-span-5"><div class="ph" data-gallery-idx="18"><img src="sito/sito/DSCF1558.webp" alt="Panoramica dall'alto del Tursport" loading="lazy"></div></div>
+        <div class="g-span-7"><div class="ph" data-gallery-idx="19"><img src="sito/sito/camere-app.webp" alt="Camera e sistemazioni Tursport" loading="lazy"></div></div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Modal Galleria Fullscreen Navigabile -->
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Galleria a schermo intero">
+      <button class="gallery-modal__close" id="galleryClose" aria-label="Chiudi galleria">&#x2715;</button>
+      <button class="gallery-modal__nav gallery-modal__prev" id="galleryPrev" aria-label="Immagine precedente">&#x276E;</button>
+      <div class="gallery-modal__stage">
+        <img id="galleryModalImg" src="sito/sito/DSCF1194.webp" alt="Galleria Tursport">
+        <div class="gallery-modal__caption">
+          <span id="galleryModalCounter" class="gallery-modal__counter">1 / 20</span>
+        </div>
+      </div>
+      <button class="gallery-modal__nav gallery-modal__next" id="galleryNext" aria-label="Immagine successiva">&#x276F;</button>
+    </div>
 
 
 </main>
