@@ -40,7 +40,7 @@
       about_lead: "Ci sono luoghi che nascono per accogliere. Altri, con il tempo, entrano a far parte della storia di una città.",
       about_p1: "Tursport nasce nel 1980 a San Vito, alle porte di Taranto, con una vocazione che va oltre l’ospitalità. Negli anni ha accolto personalità di spicco del panorama italiano e internazionale, diventando un punto di riferimento per lo sport, la cultura e la vita del territorio.",
       about_p2: "Una storia costruita attraverso le persone, le passioni e le occasioni di condivisione.",
-      about_p3: "Oggi Tursport continua a evolversi, in Un luogo che accoglie storie diverse e ne scrive di nuove.",
+      about_p3: "Oggi Tursport continua a evolversi, in un luogo che accoglie storie diverse e ne scrive di nuove.",
       
       gallery_h2: "Gli spazi, da vicino.",
       gallery_desc: "Scopri gli ambienti e i luoghi che compongono il mondo Tursport.",
