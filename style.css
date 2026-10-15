@@ -702,15 +702,19 @@ img {
 /* ---------- Sezione Piantina / Resort Map ---------- */
 .sec--map {
   background: var(--bg);
-  border-top: 1px solid var(--line);
+  border: none !important;
+  border-top: none !important;
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 .map-head {
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 .map-frame {
   width: 100%;
   background: transparent;
-  border: none;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   padding: 0;
   display: flex;
   align-items: center;
@@ -718,10 +722,13 @@ img {
 }
 .map-img {
   width: 100%;
-  max-width: 560px;
+  max-width: 380px;
   height: auto;
   display: block;
   margin-inline: auto;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* ---------- About & Page Head Grid ---------- */
