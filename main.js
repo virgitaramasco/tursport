@@ -33,7 +33,7 @@
       idx_events_title: "Eventi",
       idx_events_desc: "Incontrarsi e condividere nuove idee.",
       btn_discover: "Scopri",
-      map_h2: "La mappa del resort.",
+      map_h2: "La mappa del residence.",
       map_lead: "Tutti gli spazi del Tursport a colpo d'occhio: hotel, appartamenti, impianti sportivi e aree relax.",
       
       about_h2: "Dal 1980, un punto d’incontro.",
@@ -197,7 +197,7 @@
       idx_events_title: "Events",
       idx_events_desc: "Connecting and sharing new ideas.",
       btn_discover: "Explore",
-      map_h2: "The resort layout.",
+      map_h2: "The residence layout.",
       map_lead: "All Tursport spaces at a glance: hotel, apartments, sports facilities, and relaxation areas.",
       
       about_h2: "Since 1980, a gathering point.",
