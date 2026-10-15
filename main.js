@@ -570,18 +570,18 @@
     });
   });
 
-  /* ---------- Fullscreen Lightbox Gallery Controller (20 Immagini) ---------- */
+  /* ---------- Fullscreen Lightbox Gallery Controller (26 Immagini) ---------- */
   var galleryImages = [
     { src: "sito/sito/DSCF1194.webp" },
     { src: "sito/sito/DSCF0705.webp" },
     { src: "sito/sito/DSCF1403.webp" },
     { src: "sito/sito/DSCF1011.webp" },
     { src: "sito/sito/DSCF1550.webp" },
-    { src: "sito/sito/DSCF1240.webp" },
+    { src: "sito/sito/galleria-tennis-notte.webp" },
     { src: "sito/sito/DSCF1202.webp" },
     { src: "sito/sito/DSCF0744.webp" },
     { src: "sito/sito/DSCF0786.webp" },
-    { src: "sito/sito/DSCF0801.webp" },
+    { src: "sito/sito/galleria-palestra.webp" },
     { src: "sito/sito/DSCF0823.webp" },
     { src: "sito/sito/DSCF1418.webp" },
     { src: "sito/sito/DSCF1051.webp" },
@@ -590,6 +590,12 @@
     { src: "sito/sito/DSCF1244.webp" },
     { src: "sito/sito/DSCF1460.webp" },
     { src: "sito/sito/DSCF1538.webp" },
+    { src: "sito/sito/galleria-beach-volley-notte.webp" },
+    { src: "sito/sito/galleria-scala-dettaglio.webp" },
+    { src: "sito/sito/galleria-orchidee-finestra.webp" },
+    { src: "sito/sito/galleria-cucina-tavolo.webp" },
+    { src: "sito/sito/galleria-angolo-cottura.webp" },
+    { src: "sito/sito/galleria-camera-suite.webp" },
     { src: "sito/sito/DSCF1558.webp" },
     { src: "sito/sito/camere-app.webp" }
   ];
