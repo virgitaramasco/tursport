@@ -33,6 +33,8 @@
       idx_events_title: "Eventi",
       idx_events_desc: "Incontrarsi e condividere nuove idee.",
       btn_discover: "Scopri",
+      map_h2: "La mappa del resort.",
+      map_lead: "Tutti gli spazi del Tursport a colpo d'occhio: hotel, appartamenti, impianti sportivi e aree relax.",
       
       about_h2: "Dal 1980, un punto d’incontro.",
       about_lead: "Ci sono luoghi che nascono per accogliere. Altri, con il tempo, entrano a far parte della storia di una città.",
@@ -195,6 +197,8 @@
       idx_events_title: "Events",
       idx_events_desc: "Connecting and sharing new ideas.",
       btn_discover: "Explore",
+      map_h2: "The resort layout.",
+      map_lead: "All Tursport spaces at a glance: hotel, apartments, sports facilities, and relaxation areas.",
       
       about_h2: "Since 1980, a gathering point.",
       about_lead: "Some places are born to welcome. Others, with time, become woven into the story of a city.",
@@ -355,6 +359,11 @@
       var isActive = (b.getAttribute('data-lang') === lang);
       b.classList.toggle('is-active', isActive);
       b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.map-img').forEach(function(img){
+      img.src = (lang === 'en') ? 'piantinainglese.svg' : 'piantinaitaliano.svg';
+      img.alt = (lang === 'en') ? 'Tursport Hotel Residence resort map' : 'Mappa della struttura Tursport Hotel Residence';
     });
 
     try { localStorage.setItem('tursport_lang', lang); } catch(e){}
