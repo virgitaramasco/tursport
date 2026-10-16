@@ -91,11 +91,13 @@
       pool_cta: "Rimani aggiornato",
       
       events_arena_h2: "Porta la tua squadra, o la tua idea.",
+      events_arena_sub: "Dall'allenamento all'evento, a modo tuo.",
       events_arena_p1: "Il palazzetto del Tursport è uno spazio dedicato allo sport e alle attività che prendono forma intorno ad esso. Pensato anche per il basket, può essere riservato per allenamenti, iniziative sportive ed eventi.",
       events_arena_p2: "Raccontaci cosa hai in mente: valuteremo insieme disponibilità e modalità di utilizzo.",
       events_arena_btn: "Richiedi un preventivo",
       
       events_corp_h2: "Le idee prendono spazio.",
+      events_corp_sub: "Il tuo incontro, organizzato con cura.",
       events_corp_p1: "Ogni incontro è un’occasione per condividere visioni e sviluppare nuove idee. Tursport offre spazi dedicati a riunioni, meeting aziendali e momenti di lavoro in team, con la possibilità di integrare servizi di ristorazione e coffee break.",
       events_corp_p2: "Ambienti e servizi possono essere organizzati in base alle caratteristiche dell’incontro, per un’esperienza di lavoro funzionale e curata.",
       events_corp_btn: "Organizza il tuo evento",
@@ -255,11 +257,13 @@
       pool_cta: "Stay updated",
       
       events_arena_h2: "Bring your team, or your vision.",
+      events_arena_sub: "From training to events, your way.",
       events_arena_p1: "The Tursport arena is a dedicated space for sports and activities that take shape around them. Designed also for basketball, it can be reserved for training sessions, sporting initiatives and events.",
       events_arena_p2: "Tell us what you have in mind: we will assess availability and options together.",
       events_arena_btn: "Request a quote",
       
       events_corp_h2: "Ideas find their space.",
+      events_corp_sub: "Your meeting, thoughtfully organized.",
       events_corp_p1: "Every meeting is an opportunity to exchange perspectives and develop new visions. Tursport offers modular rooms for executive boards, corporate workshops, and team gatherings, enriched with catering and coffee breaks.",
       events_corp_p2: "Spaces and services can be tailored to the specific characteristics of your gathering, delivering a functional and refined work experience.",
       events_corp_btn: "Plan your event",
