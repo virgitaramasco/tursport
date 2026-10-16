@@ -133,6 +133,7 @@
       contact_h2: "Il tuo soggiorno comincia da qui.",
       contact_p1: "Che tu stia organizzando una vacanza o un viaggio di lavoro, Tursport è pronto ad accoglierti. Siamo a disposizione per accompagnarti nella scelta della sistemazione e offrirti tutte le informazioni necessarie per vivere al meglio il tuo soggiorno.",
       contact_p2: "Per richieste e prenotazioni, contattaci. Ti aspettiamo al Tursport.",
+      contact_info_h3: "Recapiti",
       contact_addr_dt: "Indirizzo",
       contact_tel_dt: "Telefono",
       contact_wa_dt: "WhatsApp",
@@ -140,6 +141,7 @@
       contact_ig_dt: "Instagram",
       contact_ig_dd: "Profilo ufficiale",
       
+      form_title: "Modulo di contatto",
       form_name_label: "Nome",
       form_email_label: "Email",
       form_tel_label: "Telefono (facoltativo)",
@@ -299,6 +301,7 @@
       contact_h2: "Your stay starts right here.",
       contact_p1: "Whether organizing a relaxing holiday or a corporate trip, Tursport is delighted to welcome you. Our team is at your disposal to assist in selecting accommodations and provide details for your stay.",
       contact_p2: "For bookings and inquiries, reach out below. We look forward to seeing you.",
+      contact_info_h3: "Contact Details",
       contact_addr_dt: "Address",
       contact_tel_dt: "Phone",
       contact_wa_dt: "WhatsApp",
@@ -306,6 +309,7 @@
       contact_ig_dt: "Instagram",
       contact_ig_dd: "Official profile",
       
+      form_title: "Contact Form",
       form_name_label: "Full Name",
       form_email_label: "Email Address",
       form_tel_label: "Phone (optional)",
