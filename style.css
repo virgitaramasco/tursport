@@ -547,7 +547,7 @@ img {
 }
 
 .page-hero--video .h1-page {
-  color: #ffffff !important;
+  color: #f6f2e1 !important;
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
@@ -556,7 +556,7 @@ img {
 
 .page-hero--video .page-hero__lead,
 .page-hero--video .lead {
-  color: #ffffff !important;
+  color: #f6f2e1 !important;
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
