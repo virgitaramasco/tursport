@@ -83,25 +83,26 @@
       </div>
 
       <form class="contact__form form reveal reveal-delay-1" action="https://api.web3forms.com/submit" method="POST" data-form id="contactForm">
-        <input type="hidden" name="access_key" value="INSERISCI_QUI_LA_CHIAVE">
+        <input type="hidden" name="access_key" value="1f686f76-20f7-4569-aced-ad208d753f12">
         <input type="hidden" name="subject" value="Nuova richiesta dal sito Tursport">
+        <input type="hidden" name="from_name" value="Sito Web Tursport">
         <input type="checkbox" name="botcheck" style="display: none;">
         <h3 class="h3 field--full" style="margin-bottom:.5rem" data-i18n="form_title">Modulo di contatto</h3>
         <div class="field">
           <label for="c-nome" data-i18n="form_name_label">Nome e Cognome</label>
-          <input id="c-nome" name="nome" type="text" autocomplete="name" required>
+          <input id="c-nome" name="Nome" type="text" autocomplete="name" required>
         </div>
         <div class="field">
           <label for="c-email" data-i18n="form_email_label">Email</label>
-          <input id="c-email" name="email" type="email" autocomplete="email" required>
+          <input id="c-email" name="Email" type="email" autocomplete="email" required>
         </div>
         <div class="field">
           <label for="c-tel" data-i18n="form_tel_label">Telefono (facoltativo)</label>
-          <input id="c-tel" name="telefono" type="tel" autocomplete="tel">
+          <input id="c-tel" name="Telefono" type="tel" autocomplete="tel">
         </div>
         <div class="field">
           <label for="c-motivo" data-i18n="form_reason_label">Motivo della richiesta</label>
-          <select id="c-motivo" name="motivo" required>
+          <select id="c-motivo" name="Motivo_Richiesta" required>
             <option value="" data-i18n="form_reason_select">Seleziona</option>
             <option value="Camere e appartamenti" data-i18n="form_reason_opt1">Camere e appartamenti</option>
             <option value="Sport e impianti" data-i18n="form_reason_opt2">Sport e impianti</option>
@@ -112,10 +113,10 @@
         </div>
         <div class="field field--full">
           <label for="c-msg" data-i18n="form_msg_label">Messaggio</label>
-          <textarea id="c-msg" name="messaggio" required></textarea>
+          <textarea id="c-msg" name="Messaggio" required></textarea>
         </div>
         <label class="consent field--full">
-          <input type="checkbox" name="consenso_privacy" required>
+          <input type="checkbox" name="Consenso_Privacy" required>
           <span data-i18n="form_consent">Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.</span>
         </label>
         <div class="field--full"><button class="btn" type="submit" data-i18n="form_submit">Invia la richiesta</button></div>
@@ -163,11 +164,12 @@
       <div class="footer__col footer__col--newsletter">
         <h2 data-i18n="footer_col_newsletter">Newsletter</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="footer__nl-form" data-form>
-          <input type="hidden" name="access_key" value="INSERISCI_QUI_LA_CHIAVE">
+          <input type="hidden" name="access_key" value="1f686f76-20f7-4569-aced-ad208d753f12">
           <input type="hidden" name="subject" value="Nuova iscrizione alla Newsletter - Tursport">
+          <input type="hidden" name="from_name" value="Newsletter Tursport">
           <input type="checkbox" name="botcheck" style="display: none;">
           <div class="footer__nl-group">
-            <input type="email" name="Email_Iscritto" placeholder="La tua email..." required class="footer__nl-input" data-i18n-ph="footer_nl_ph">
+            <input type="email" name="Email_Newsletter" placeholder="Inserisci la tua email..." required class="footer__nl-input" data-i18n-ph="footer_nl_ph">
             <button type="submit" class="btn btn--nl" data-i18n="footer_nl_btn">Iscriviti</button>
           </div>
           <label class="consent footer__consent">

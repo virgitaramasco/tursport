@@ -164,7 +164,7 @@
       footer_col_follow: "Seguici",
       footer_col_info: "Informazioni",
       footer_col_newsletter: "Newsletter",
-      footer_nl_ph: "La tua email...",
+      footer_nl_ph: "Inserisci la tua email...",
       footer_nl_btn: "Iscriviti",
       footer_nl_consent: "Acconsento al trattamento dei dati (<a href='privacy.html' target='_blank' rel='noopener'>Privacy</a>)",
       footer_privacy_cookie: "Privacy & Cookie Policy",

@@ -83,12 +83,13 @@
         <p data-i18n="comm_desc">Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.</p>
       </div>
       <form class="form" action="https://api.web3forms.com/submit" method="POST" data-form>
-        <input type="hidden" name="access_key" value="INSERISCI_QUI_LA_CHIAVE">
+        <input type="hidden" name="access_key" value="1f686f76-20f7-4569-aced-ad208d753f12">
         <input type="hidden" name="subject" value="Nuova iscrizione alla Newsletter - Tursport">
+        <input type="hidden" name="from_name" value="Newsletter Tursport">
         <input type="checkbox" name="botcheck" style="display: none;">
         <div class="field field--full">
           <label for="c-email-comm" data-i18n="comm_label">La tua email</label>
-          <input id="c-email-comm" name="Email_Iscritto" type="email" autocomplete="email" placeholder="nome@esempio.it" data-i18n-ph="comm_ph" required>
+          <input id="c-email-comm" name="Email_Newsletter" type="email" autocomplete="email" placeholder="Inserisci la tua email..." data-i18n-ph="comm_ph" required>
         </div>
         <label class="consent field--full">
           <input type="checkbox" name="Consenso_Newsletter" required>
@@ -134,11 +135,12 @@
       <div class="footer__col footer__col--newsletter">
         <h2 data-i18n="footer_col_newsletter">Newsletter</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="footer__nl-form" data-form>
-          <input type="hidden" name="access_key" value="INSERISCI_QUI_LA_CHIAVE">
+          <input type="hidden" name="access_key" value="1f686f76-20f7-4569-aced-ad208d753f12">
           <input type="hidden" name="subject" value="Nuova iscrizione alla Newsletter - Tursport">
+          <input type="hidden" name="from_name" value="Newsletter Tursport">
           <input type="checkbox" name="botcheck" style="display: none;">
           <div class="footer__nl-group">
-            <input type="email" name="Email_Iscritto" placeholder="La tua email..." required class="footer__nl-input" data-i18n-ph="footer_nl_ph">
+            <input type="email" name="Email_Newsletter" placeholder="Inserisci la tua email..." required class="footer__nl-input" data-i18n-ph="footer_nl_ph">
             <button type="submit" class="btn btn--nl" data-i18n="footer_nl_btn">Iscriviti</button>
           </div>
           <label class="consent footer__consent">
