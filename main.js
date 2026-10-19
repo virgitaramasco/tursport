@@ -50,7 +50,7 @@
       comm_desc: "Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.",
       comm_label: "La tua email",
       comm_ph: "nome@esempio.it",
-      comm_consent: "Ho letto l'<a href='contatti.html'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
+      comm_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
       comm_btn: "Entra nella community",
       
       srv_h2: "Tutto ciò che rende unico il tuo soggiorno.",
@@ -127,7 +127,7 @@
       nl_p2: "Lascia il tuo indirizzo email per restare in contatto con noi.",
       nl_label: "Inserisci la tua email",
       nl_ph: "Inserisci la tua email",
-      nl_consent: "Ho letto l'<a href='contatti.html'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
+      nl_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
       nl_btn: "Iscriviti alla newsletter",
       
       contact_h2: "Il tuo soggiorno comincia da qui.",
@@ -142,7 +142,7 @@
       contact_ig_dd: "Profilo ufficiale",
       
       form_title: "Modulo di contatto",
-      form_name_label: "Nome",
+      form_name_label: "Nome e Cognome",
       form_email_label: "Email",
       form_tel_label: "Telefono (facoltativo)",
       form_reason_label: "Motivo della richiesta",
@@ -155,7 +155,7 @@
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Altro",
       form_msg_label: "Messaggio",
-      form_consent: "Ho letto l'<a href='#'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
+      form_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
       form_submit: "Invia la richiesta",
       form_success: "Grazie, abbiamo ricevuto i tuoi dati.",
       
@@ -163,6 +163,10 @@
       footer_col_contact: "Contatti",
       footer_col_follow: "Seguici",
       footer_col_info: "Informazioni",
+      footer_col_newsletter: "Newsletter",
+      footer_nl_ph: "La tua email...",
+      footer_nl_btn: "Iscriviti",
+      footer_nl_consent: "Acconsento al trattamento dei dati (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. Tutti i diritti riservati.",
@@ -218,7 +222,7 @@
       comm_desc: "News, upcoming events, and fresh experiences. Leave your email address to receive curated updates.",
       comm_label: "Your email",
       comm_ph: "name@example.com",
-      comm_consent: "I have read the <a href='contatti.html'>privacy policy</a> and consent to data processing for updates.",
+      comm_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for updates.",
       comm_btn: "Join the community",
       
       srv_h2: "Everything that makes your stay unique.",
@@ -295,7 +299,7 @@
       nl_p2: "Enter your email address to remain connected.",
       nl_label: "Enter your email",
       nl_ph: "Enter your email",
-      nl_consent: "I have read the <a href='contatti.html'>privacy policy</a> and consent to data processing for the newsletter.",
+      nl_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for the newsletter.",
       nl_btn: "Subscribe to newsletter",
       
       contact_h2: "Your stay starts right here.",
@@ -323,7 +327,7 @@
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Other",
       form_msg_label: "Message",
-      form_consent: "I have read the <a href='#'>privacy policy</a> and consent to data processing to handle my inquiry.",
+      form_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing to handle my inquiry.",
       form_submit: "Send inquiry",
       form_success: "Thank you! Your inquiry has been received.",
       
@@ -331,6 +335,10 @@
       footer_col_contact: "Contact",
       footer_col_follow: "Follow Us",
       footer_col_info: "Information",
+      footer_col_newsletter: "Newsletter",
+      footer_nl_ph: "Your email...",
+      footer_nl_btn: "Subscribe",
+      footer_nl_consent: "I consent to the data processing (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. All rights reserved.",
@@ -568,11 +576,77 @@
     }
   }
 
-  /* Form Submission feedback */
+  /* Form Submission feedback (Web3Forms AJAX / Preview) */
   document.querySelectorAll('form[data-form]').forEach(function(f){
     f.addEventListener('submit', function(e){
-      e.preventDefault();
+      var action = f.getAttribute('action');
+      var accessKeyInput = f.querySelector('input[name="access_key"]');
       var s = f.querySelector('.form__status');
+      var submitBtn = f.querySelector('button[type="submit"]');
+
+      if(action && action.indexOf('web3forms.com') !== -1){
+        e.preventDefault();
+
+        // If access key is placeholder or empty, display success in preview mode
+        if(accessKeyInput && (accessKeyInput.value === 'INSERISCI_QUI_LA_CHIAVE' || !accessKeyInput.value.trim())){
+          if(s){
+            s.style.color = '';
+            s.textContent = translations[currentLang].form_success;
+          }
+          f.reset();
+          return;
+        }
+
+        // Live Web3Forms submit via fetch
+        var originalBtnText = submitBtn ? submitBtn.textContent : '';
+        if(submitBtn){
+          submitBtn.disabled = true;
+          submitBtn.setAttribute('aria-busy', 'true');
+        }
+        if(s){
+          s.style.color = '';
+          s.textContent = (currentLang === 'en' ? 'Sending...' : 'Invio in corso...');
+        }
+
+        var formData = new FormData(f);
+        fetch(action, {
+          method: 'POST',
+          body: formData
+        })
+        .then(function(res){ return res.json(); })
+        .then(function(data){
+          if(submitBtn){
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+          }
+          if(data && data.success){
+            if(s){
+              s.style.color = '';
+              s.textContent = translations[currentLang].form_success;
+            }
+            f.reset();
+          } else {
+            if(s){
+              s.style.color = '#c0392b';
+              s.textContent = (data && data.message) ? data.message : (currentLang === 'en' ? 'An error occurred. Please try again.' : 'Si è verificato un errore. Riprova più tardi.');
+            }
+          }
+        })
+        .catch(function(){
+          if(submitBtn){
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+          }
+          if(s){
+            s.style.color = '#c0392b';
+            s.textContent = (currentLang === 'en' ? 'Connection error. Please try again.' : 'Errore di connessione. Riprova più tardi.');
+          }
+        });
+        return;
+      }
+
+      // Default fallback
+      e.preventDefault();
       if(s){ s.textContent = translations[currentLang].form_success; }
       f.reset();
     });

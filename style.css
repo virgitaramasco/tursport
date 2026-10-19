@@ -1002,10 +1002,57 @@ img {
 .footer a { color: inherit; text-decoration: none; transition: opacity 0.2s ease; }
 .footer a:hover { opacity: 0.7; }
 .footer__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2rem var(--gutter); }
-.footer__brand { grid-column: 1 / span 5; }
+.footer__brand { grid-column: 1 / span 3; }
 .footer__col { grid-column: span 2; }
+.footer__col--newsletter { grid-column: span 3; }
 .footer__col h2 { font-family: var(--font-text); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
 .footer__col ul { display: grid; gap: 0.5rem; }
+
+.footer__nl-form { display: grid; gap: 0.65rem; }
+.footer__nl-group { display: flex; gap: 0.5rem; align-items: stretch; }
+.footer__nl-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1.5px solid var(--ink);
+  border-radius: 0;
+  padding: 0.45rem 0;
+  font: inherit;
+  font-size: 0.85rem;
+  letter-spacing: var(--letter-spacing-body);
+}
+.footer__nl-input:focus { outline: none; border-bottom-color: var(--muted); }
+.footer__nl-input::placeholder { color: var(--ink); opacity: 0.55; }
+.btn--nl {
+  min-height: auto;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  flex: none;
+}
+.footer__consent {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--muted);
+  cursor: pointer;
+}
+.footer__consent input {
+  margin-top: 0.15rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  accent-color: var(--ink);
+  flex: none;
+}
+.footer__consent a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer a.iubenda-embed { cursor: pointer; }
 .footer__bottom {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   padding-top: 1.5rem;
@@ -1026,14 +1073,16 @@ img {
   .facilities li:nth-child(even) { margin-top: 0; }
   .tiles li { grid-column: span 6; }
   .tiles li:nth-child(7) { grid-column: 1 / -1; }
-  .footer__col { grid-column: span 4; }
   .footer__brand { grid-column: 1 / -1; }
+  .footer__col { grid-column: span 3; }
+  .footer__col--newsletter { grid-column: span 3; }
 }
 @media (max-width: 56rem) {
   .page-hero__lead, .page-hero__more,
   .about__head .h1-page, .about__lead, .about__body,
   .community__text, .community form,
-  .contact__info, .contact__form { grid-column: 1 / -1; }
+  .contact__info, .contact__form,
+  .footer__col, .footer__col--newsletter { grid-column: 1 / -1; }
   .page-hero--video .h1-page {
     font-size: clamp(1.6rem, 5.2vw, 2.8rem);
     white-space: nowrap;
