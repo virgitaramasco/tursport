@@ -4,7 +4,7 @@
       page_title: "Tursport Hotel Residence | Capo San Vito, Taranto",
       menu_btn: "Menu",
       menu_close: "Chiudi \u2715",
-      book_btn: "Book",
+      book_btn: "Prenota",
       nav_home: "Home",
       nav_about: "About Us",
       nav_services: "Services",
