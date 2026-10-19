@@ -1052,7 +1052,6 @@ img {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.footer a.iubenda-embed { cursor: pointer; }
 .footer__bottom {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   padding-top: 1.5rem;
@@ -1063,6 +1062,85 @@ img {
   gap: 1rem;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+/* ---------- Privacy & Legal Page ---------- */
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.legal__back:hover {
+  color: var(--ink);
+}
+.legal__card {
+  background: var(--tint);
+  border: 1px solid var(--line);
+  padding: 1.75rem 2rem;
+  margin-block: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.legal__card-item dt {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.legal__card-item dd {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  word-break: break-word;
+}
+.legal__card-item a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal__article {
+  max-width: 72ch;
+}
+.legal__article h2 {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+}
+.legal__article h3 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.legal__article p, .legal__article ul {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.legal__article ul {
+  list-style: disc;
+  padding-left: 1.35rem;
+  margin-block: 0.75rem;
+}
+.legal__article ul li {
+  margin-bottom: 0.45rem;
+}
+.legal__article a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal__article a:hover {
+  color: var(--muted);
 }
 
 /* ---------- Responsive ---------- */

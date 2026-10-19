@@ -1061,7 +1061,6 @@ img {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.footer a.iubenda-embed { cursor: pointer; }
 .footer__bottom {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   padding-top: 1.5rem;
@@ -1072,6 +1071,85 @@ img {
   gap: 1rem;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+/* ---------- Privacy & Legal Page ---------- */
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.legal__back:hover {
+  color: var(--ink);
+}
+.legal__card {
+  background: var(--tint);
+  border: 1px solid var(--line);
+  padding: 1.75rem 2rem;
+  margin-block: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.legal__card-item dt {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.legal__card-item dd {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  word-break: break-word;
+}
+.legal__card-item a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal__article {
+  max-width: 72ch;
+}
+.legal__article h2 {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+}
+.legal__article h3 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.legal__article p, .legal__article ul {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.legal__article ul {
+  list-style: disc;
+  padding-left: 1.35rem;
+  margin-block: 0.75rem;
+}
+.legal__article ul li {
+  margin-bottom: 0.45rem;
+}
+.legal__article a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal__article a:hover {
+  color: var(--muted);
 }
 
 /* ---------- Responsive ---------- */
@@ -1220,37 +1298,6 @@ img {
   gtag('js', new Date());
   gtag('config', 'G-ZF5MGMN0HY');
 </script>
-
-<!-- Iubenda Cookie Solution -->
-<script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = {
-  "consentOnContinuedBrowsing": false,
-  "invalidateConsentWithoutLog": true,
-  "perPurposeConsent": true,
-  "siteId": 2207142,
-  "cookiePolicyId": 97878705,
-  "lang": "it",
-  "cookiePolicyUrl": "https://www.iubenda.com/privacy-policy/97878705/cookie-policy",
-  "banner": {
-    "acceptButtonCaptionColor": "white",
-    "acceptButtonColor": "#7f5722",
-    "acceptButtonDisplay": true,
-    "backgroundColor": "#ffffff",
-    "closeButtonDisplay": false,
-    "customizeButtonCaptionColor": "white",
-    "customizeButtonColor": "#c59a74",
-    "customizeButtonDisplay": true,
-    "explicitWithdrawal": true,
-    "position": "float-top-center",
-    "rejectButtonCaptionColor": "white",
-    "rejectButtonColor": "#c59a74",
-    "rejectButtonDisplay": true,
-    "textColor": "#010101"
-  }
-};
-</script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 </head>
 <body>
 <!-- ================= HEADER ================= -->
@@ -1461,8 +1508,7 @@ _iub.csConfiguration = {
       <div class="footer__col">
         <h2 data-i18n="footer_col_info">Informazioni</h2>
         <ul>
-          <li><a href="https://www.iubenda.com/privacy-policy/97878705" class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy" data-i18n="footer_privacy">Privacy Policy</a></li>
-          <li><a href="https://www.iubenda.com/privacy-policy/97878705/cookie-policy" class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy" data-i18n="footer_cookie">Cookie Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer_privacy_cookie">Privacy &amp; Cookie Policy</a></li>
         </ul>
       </div>
       <div class="footer__col footer__col--newsletter">
@@ -1477,7 +1523,7 @@ _iub.csConfiguration = {
           </div>
           <label class="consent footer__consent">
             <input type="checkbox" name="Consenso_Newsletter" required>
-            <span data-i18n="footer_nl_consent">Acconsento al trattamento dei dati (<a href="https://www.iubenda.com/privacy-policy/97878705" class="iubenda-nostyle no-brand iubenda-embed" target="_blank" rel="noopener">Privacy</a>)</span>
+            <span data-i18n="footer_nl_consent">Acconsento al trattamento dei dati (<a href="privacy.html" target="_blank" rel="noopener">Privacy</a>)</span>
           </label>
           <p class="form__status" role="status" aria-live="polite" style="margin-top:0.35rem; font-size:0.78rem;"></p>
         </form>
@@ -1489,7 +1535,6 @@ _iub.csConfiguration = {
     </div>
   </div>
 </footer>
-<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 <script>
 (function(){
   var translations = {
@@ -1543,7 +1588,7 @@ _iub.csConfiguration = {
       comm_desc: "Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.",
       comm_label: "La tua email",
       comm_ph: "nome@esempio.it",
-      comm_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
+      comm_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
       comm_btn: "Entra nella community",
       
       srv_h2: "Tutto ciò che rende unico il tuo soggiorno.",
@@ -1620,7 +1665,7 @@ _iub.csConfiguration = {
       nl_p2: "Lascia il tuo indirizzo email per restare in contatto con noi.",
       nl_label: "Inserisci la tua email",
       nl_ph: "Inserisci la tua email",
-      nl_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
+      nl_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
       nl_btn: "Iscriviti alla newsletter",
       
       contact_h2: "Il tuo soggiorno comincia da qui.",
@@ -1648,7 +1693,7 @@ _iub.csConfiguration = {
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Altro",
       form_msg_label: "Messaggio",
-      form_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
+      form_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
       form_submit: "Invia la richiesta",
       form_success: "Grazie, abbiamo ricevuto i tuoi dati.",
       
@@ -1659,7 +1704,8 @@ _iub.csConfiguration = {
       footer_col_newsletter: "Newsletter",
       footer_nl_ph: "La tua email...",
       footer_nl_btn: "Iscriviti",
-      footer_nl_consent: "Acconsento al trattamento dei dati (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_nl_consent: "Acconsento al trattamento dei dati (<a href='privacy.html' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_privacy_cookie: "Privacy & Cookie Policy",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. Tutti i diritti riservati.",
@@ -1715,7 +1761,7 @@ _iub.csConfiguration = {
       comm_desc: "News, upcoming events, and fresh experiences. Leave your email address to receive curated updates.",
       comm_label: "Your email",
       comm_ph: "name@example.com",
-      comm_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for updates.",
+      comm_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for updates.",
       comm_btn: "Join the community",
       
       srv_h2: "Everything that makes your stay unique.",
@@ -1792,7 +1838,7 @@ _iub.csConfiguration = {
       nl_p2: "Enter your email address to remain connected.",
       nl_label: "Enter your email",
       nl_ph: "Enter your email",
-      nl_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for the newsletter.",
+      nl_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for the newsletter.",
       nl_btn: "Subscribe to newsletter",
       
       contact_h2: "Your stay starts right here.",
@@ -1820,7 +1866,7 @@ _iub.csConfiguration = {
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Other",
       form_msg_label: "Message",
-      form_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing to handle my inquiry.",
+      form_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing to handle my inquiry.",
       form_submit: "Send inquiry",
       form_success: "Thank you! Your inquiry has been received.",
       
@@ -1831,7 +1877,8 @@ _iub.csConfiguration = {
       footer_col_newsletter: "Newsletter",
       footer_nl_ph: "Your email...",
       footer_nl_btn: "Subscribe",
-      footer_nl_consent: "I consent to the data processing (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_nl_consent: "I consent to the data processing (<a href='privacy.html' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_privacy_cookie: "Privacy & Cookie Policy",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. All rights reserved.",

@@ -50,7 +50,7 @@
       comm_desc: "Novità, eventi e nuove occasioni da vivere. Lascia il tuo indirizzo email per ricevere gli aggiornamenti.",
       comm_label: "La tua email",
       comm_ph: "nome@esempio.it",
-      comm_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
+      comm_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per ricevere aggiornamenti.",
       comm_btn: "Entra nella community",
       
       srv_h2: "Tutto ciò che rende unico il tuo soggiorno.",
@@ -127,7 +127,7 @@
       nl_p2: "Lascia il tuo indirizzo email per restare in contatto con noi.",
       nl_label: "Inserisci la tua email",
       nl_ph: "Inserisci la tua email",
-      nl_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
+      nl_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per l'iscrizione alla newsletter.",
       nl_btn: "Iscriviti alla newsletter",
       
       contact_h2: "Il tuo soggiorno comincia da qui.",
@@ -155,7 +155,7 @@
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Altro",
       form_msg_label: "Messaggio",
-      form_consent: "Ho letto l'<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
+      form_consent: "Ho letto l'<a href='privacy.html' target='_blank' rel='noopener'>informativa privacy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
       form_submit: "Invia la richiesta",
       form_success: "Grazie, abbiamo ricevuto i tuoi dati.",
       
@@ -166,7 +166,8 @@
       footer_col_newsletter: "Newsletter",
       footer_nl_ph: "La tua email...",
       footer_nl_btn: "Iscriviti",
-      footer_nl_consent: "Acconsento al trattamento dei dati (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_nl_consent: "Acconsento al trattamento dei dati (<a href='privacy.html' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_privacy_cookie: "Privacy & Cookie Policy",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. Tutti i diritti riservati.",
@@ -222,7 +223,7 @@
       comm_desc: "News, upcoming events, and fresh experiences. Leave your email address to receive curated updates.",
       comm_label: "Your email",
       comm_ph: "name@example.com",
-      comm_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for updates.",
+      comm_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for updates.",
       comm_btn: "Join the community",
       
       srv_h2: "Everything that makes your stay unique.",
@@ -299,7 +300,7 @@
       nl_p2: "Enter your email address to remain connected.",
       nl_label: "Enter your email",
       nl_ph: "Enter your email",
-      nl_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for the newsletter.",
+      nl_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing for the newsletter.",
       nl_btn: "Subscribe to newsletter",
       
       contact_h2: "Your stay starts right here.",
@@ -327,7 +328,7 @@
       form_reason_opt6: "Co-working",
       form_reason_opt7: "Other",
       form_msg_label: "Message",
-      form_consent: "I have read the <a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing to handle my inquiry.",
+      form_consent: "I have read the <a href='privacy.html' target='_blank' rel='noopener'>privacy policy</a> and consent to data processing to handle my inquiry.",
       form_submit: "Send inquiry",
       form_success: "Thank you! Your inquiry has been received.",
       
@@ -338,7 +339,8 @@
       footer_col_newsletter: "Newsletter",
       footer_nl_ph: "Your email...",
       footer_nl_btn: "Subscribe",
-      footer_nl_consent: "I consent to the data processing (<a href='https://www.iubenda.com/privacy-policy/97878705' class='iubenda-nostyle no-brand iubenda-embed' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_nl_consent: "I consent to the data processing (<a href='privacy.html' target='_blank' rel='noopener'>Privacy</a>)",
+      footer_privacy_cookie: "Privacy & Cookie Policy",
       footer_privacy: "Privacy policy",
       footer_cookie: "Cookie policy",
       footer_copy: "\u00a9 2026 Tursport Hotel Residence. All rights reserved.",
